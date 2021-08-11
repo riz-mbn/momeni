@@ -79,6 +79,10 @@
 @import "./sections/sidebar";
 @import "./sections/footer";
 
+// PAGES
+@import "./pages/home";
+@import "./pages/inner";
+
 //PLUGINS
 //Include slick
 @import "../../vendor/slick/slick.scss";  

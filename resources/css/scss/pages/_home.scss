@@ -1,4 +1,23 @@
+.home {
+    background: $color-black;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
 
-.sec_test {
-    
+    header {
+        .hsnav-s4{
+
+            &.is-stuck {
+                box-shadow: none;
+                background: transparent;
+            }
+        }
+    }
+
+    footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
 }

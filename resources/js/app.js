@@ -34,6 +34,11 @@
                 }
             });
 
+            
+            $('.hero-slider').slick();
+            
+            $('.hero-slider').css('height', $(window).height() + 'px');
+
         },
 
         customDropdown: function() {

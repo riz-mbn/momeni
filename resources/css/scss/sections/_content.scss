@@ -1,0 +1,23 @@
+
+h1 {
+    font-weight: 900;
+    font-size: 90px;
+    
+    &.subtitle {
+        font-size: 80px;
+        background: linear-gradient(180deg, #00451A 0%, #00A84F 42.19%, #00A84F 58.33%, #00A84F 100%);
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: linear-gradient(to bottom, rgba(0,168,79,1) 0%,rgba(0,177,83,1) 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+}
+
+.hollow_text {
+
+    color: $color-white;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: $color-white;
+
+}

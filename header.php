@@ -23,31 +23,20 @@
                     <span class="navicon hide-for-large" data-toggle="header">mobile menu</span>
                     <nav class="navmenu show-for-large">
                         <ul class="menu align-right dropdown" data-dropdown-menu>
-                            <li class="current-menu-item"><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a>
-                                <ul>
-                                    <li><a href="#">Services 1</a></li>
-                                    <li><a href="#">Services 2</a></li>
-                                    <li><a href="#">Services 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">News & Events</a></li>
+                            <li class="current-menu-item"><a href=<?php echo home_url() ?>">Home</a></li>
+                            <li><a href="<?php echo home_url().'/company' ?>">Company</a></li>
+                            <li><a href="<?php echo home_url().'/services' ?>">Services</a></li>
+                            <li><a href="<?php echo home_url().'/portfolio' ?>">Portfolio</a></li>
+                            <li><a href="<?php echo home_url().'/contact' ?>">Contact</a></li>
                         </ul>
                     </nav>
                     <nav class="mobmenu hide-for-large">
                         <ul class="menu accordion-menu" data-multi-open="false" data-accordion-menu data-submenu-toggle="true">
                             <li class="current-menu-item"><a href="#">Home</a></li>
-                            <li><a href="#">About</a></li>
-                            <li><a href="#">Services</a>
-                                <ul>
-                                    <li><a href="#">Services 1</a></li>
-                                    <li><a href="#">Services 2</a></li>
-                                    <li><a href="#">Services 3</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">News & Events</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="<?php echo home_url().'/company' ?>">Company</a></li>
+                            <li><a href="<?php echo home_url().'/services' ?>">Services</a></li>
+                            <li><a href="<?php echo home_url().'/portfolio' ?>">Portfolio</a></li>
+                            <li><a href="<?php echo home_url().'/contact' ?>">Contact</a></li>
                         </ul>
                     </nav>
                 </div>

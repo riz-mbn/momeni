@@ -84,7 +84,7 @@ function mbn_enqueue_scripts(){
 
     // slick
     wp_enqueue_style('slick', MBN_ASSETS_URI.'/vendor/slick/slick.css', [], $wp_version);
-    wp_enqueue_script('slick', MBN_ASSETS_URI.'/vendor/slick/slick.min.js', [], $wp_version);
+    wp_enqueue_script('slick', MBN_ASSETS_URI.'/vendor/slick/slick.min.js', [], false);
 
     // Nicescroll
     // wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/jquery.nicescroll.min.js', [], $wp_version);
@@ -93,6 +93,8 @@ function mbn_enqueue_scripts(){
     //wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.css', [], $wp_version);
     //wp_enqueue_script('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.js', [], $wp_version);
 
+    // Fonts
+    wp_enqueue_style('custom-fonts', 'https://use.typekit.net/zrx8khr.css', [], $wp_version);
     
     // App
     wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
@@ -151,3 +153,52 @@ require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
 
+
+/**
+ * Register font hook.
+ *
+ * @return string
+ */
+if ( ! function_exists( 'google_fonts_url' ) ) :
+	/**
+	 * Register Google fonts.
+	 *
+	 * @return string Google fonts URL for the theme.
+	 */
+	/**
+	 * @return string
+	 */
+	function google_fonts_url() {
+		$fonts_url = '';
+		$fonts     = array();
+		$subsets   = '';
+
+		/* translators: If there are characters in your language that are not supported by this font, translate this to 'off'. Do not translate into your own language. */
+		if ( 'off' !== esc_html_x( 'on', 'Open Sans font: on or off', 'mbn_theme' ) ) {
+			$fonts[] = 'Open+Sans:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap';
+		}
+
+		if ( $fonts ) {
+			$fonts_url = add_query_arg( array(
+				'family' => urlencode( implode( '|', $fonts ) ),
+				'subset' => urlencode( $subsets ),
+			), 'https://fonts.googleapis.com/css' );
+		}
+
+		return $fonts_url;
+	}
+endif;
+
+
+add_action( 'wp_head', 'preload_fonts' ); 
+function preload_fonts() { 
+    $url = google_fonts_url(); 
+    ?> 
+<link rel="dns-prefetch" href="https://fonts.gstatic.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"> 
+<link rel="preload" href="<?php echo esc_url( $url ); ?>" as="fetch" crossorigin="anonymous"> 
+<script type="text/javascript"> 
+!function(e,n,t){"use strict";var o="<?php echo esc_url( $url ); ?>",r="__3perf_googleFontsStylesheet";function c(e){(n.head||n.body).appendChild(e)}function a(){var e=n.createElement("link");e.href=o,e.rel="stylesheet",c(e)}function f(e){if(!n.getElementById(r)){var t=n.createElement("style");t.id=r,c(t)}n.getElementById(r).innerHTML=e}e.FontFace&&e.FontFace.prototype.hasOwnProperty("display")?(t[r]&&f(t[r]),fetch(o).then(function(e){return e.text()}).then(function(e){return e.replace(/@font-face {/g,"@font-face{font-display:swap;")}).then(function(e){return t[r]=e}).then(f).catch(a)):a()}(window,document,localStorage); 
+</script>
+    <?php
+} 
