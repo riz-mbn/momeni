@@ -37,3 +37,42 @@ function courses_post() {
     );
 }
 //add_action( 'init', 'courses_post' ); 
+
+
+// Register courses Post Type
+function projects_post() {
+    register_post_type( 'projects_type',
+        array(
+            'labels'    => array(
+                'name' => __( 'Projects' ),
+                'singular_name' => __('Project')
+            ),
+            'public'        => true,
+            'has_archive'   => true,
+            'show_in_rest'  => false,
+            'menu_position' => 20,
+            'with_front' => true,
+            'supports'      =>  array('title', 'editor', 'page-attributes', 'thumbnail'),
+            'menu_icon'     => 'dashicons-editor-paragraph',
+        )
+    );
+
+    register_taxonomy(  
+        'projects_cat',
+        'projects_type',
+        array(
+            'hierarchical' => true,         
+            'has_archive' => true,
+            'label' => 'Categories',            
+            'query_var' => true,
+            'show_admin_column' => true,
+            'show_in_rest' => true,
+            'rewrite' => array(
+                'slug' => 'projects_cat',
+                'with_front' => true  
+            )
+        )
+    );
+}
+add_action( 'init', 'projects_post' ); 
+

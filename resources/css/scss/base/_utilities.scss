@@ -9,6 +9,9 @@
 .text-warning {
     color:$color-warning
 }
+.text-white {
+    color:$color-white
+}
 
 //Font Weights
 .fw-light {
@@ -43,6 +46,13 @@
         padding-left: 20px;
         padding-right: 20px;
     }
+	.order_1 {
+		order: 1;
+	}
+	
+	.order_2 {
+		order: 2
+	}
 }
 
 @include media(max-width, 375px) {
@@ -124,11 +134,11 @@
 	}
 	.slick-prev {
 		left:0;
-		background: url(../img/icon/icn-slick-chev-left.svg) no-repeat center;
+		background: url(../img/icon/icn-slick-arrow-lg.svg) no-repeat center;
 	}
 	.slick-next {
 		right: 0;
-		background: url(../img/icon/icn-slick-chev-right.svg) no-repeat center;
+		background: url(../img/icon/icn-slick-arrow-rw.svg) no-repeat center;
 	}
 }
 
@@ -148,13 +158,14 @@
 			width: 12px;
 			height: 12px;
 			border-radius: 50%;
-			background: $color-black;
+			background: transparent;
 			cursor: pointer;
+			border: 1px solid $color-white;
 		}
 
 		&.slick-active {
 			button {
-				background: $color-primary;
+				background: $color-white;
 			}
 		}
 	}
@@ -175,4 +186,16 @@
 	&.warning {
 		color: $color-white;
 	}
+}
+
+
+//animations
+
+.growUp{
+	animation: growUp 0.4s;
+}
+
+.maskPlay {
+	-webkit-animation: maskPlay 0.4s;
+	animation: maskPlay 0.4s;
 }

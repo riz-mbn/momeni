@@ -67,7 +67,7 @@ function mbn_enqueue_scripts(){
     wp_register_style('inlinecss-handle', false);
     wp_enqueue_style('inlinecss-handle');
 
-    wp_enqueue_style('font-roboto', 'https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap', [], $wp_version);
+    wp_enqueue_style('font-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap', [], $wp_version);
 
 	//Global JS
 	wp_deregister_script( 'jquery' );
@@ -174,7 +174,7 @@ if ( ! function_exists( 'google_fonts_url' ) ) :
 		$subsets   = '';
 
 		/* translators: If there are characters in your language that are not supported by this font, translate this to 'off'. Do not translate into your own language. */
-		if ( 'off' !== esc_html_x( 'on', 'Open Sans font: on or off', 'mbn_theme' ) ) {
+		if ( 'on' !== esc_html_x( 'on', 'Open Sans font: on or off', 'mbn_theme' ) ) {
 			$fonts[] = 'Open+Sans:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap';
 		}
 
@@ -182,7 +182,7 @@ if ( ! function_exists( 'google_fonts_url' ) ) :
 			$fonts_url = add_query_arg( array(
 				'family' => urlencode( implode( '|', $fonts ) ),
 				'subset' => urlencode( $subsets ),
-			), 'https://fonts.googleapis.com/css' );
+			), 'https://fonts.googleapis.com/css2' );
 		}
 
 		return $fonts_url;
@@ -190,7 +190,7 @@ if ( ! function_exists( 'google_fonts_url' ) ) :
 endif;
 
 
-add_action( 'wp_head', 'preload_fonts' ); 
+//add_action( 'wp_head', 'preload_fonts' ); 
 function preload_fonts() { 
     $url = google_fonts_url(); 
     ?> 

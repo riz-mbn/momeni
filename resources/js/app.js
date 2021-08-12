@@ -34,10 +34,38 @@
                 }
             });
 
-            
-            $('.hero-slider').slick();
-            
-            $('.hero-slider').css('height', $(window).height() + 'px');
+            $('.post_slider').slick({                  
+                dots: false,
+                arrow: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                draggable: true,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                        }
+                    },
+                ]
+            });
+            $('.hero-slider').slick({                        
+                dots: true,
+                arrow: true,
+                speed: 300,
+                      
+            });
+          
 
         },
 

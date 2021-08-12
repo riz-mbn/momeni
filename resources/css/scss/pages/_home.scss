@@ -12,12 +12,181 @@
                 box-shadow: none;
                 background: transparent;
             }
+
+
+        }
+    }
+
+    .text-group {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        position: relative;
+        margin-left: -5px;
+
+        a {
+            display: flex;
+            color: $color-white;
+            font-family: $heading-font-family;
+            font-weight: normal;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: 15px 0 15px 15px;
+
+            span {					
+                margin-right: 10px;
+            }
+        }
+        
+            
+        &:before {
+            content: '';
+            height: 2px;
+            background: linear-gradient(0deg, $color-primary , $color-primary ),linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            right: 0;
         }
     }
 
     footer {
-        position: absolute;
-        bottom: 0;
+        position: fixed;
         width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
     }
+
+    .post_slider {
+
+        &.slick-slider{
+            padding: 0 !important;
+            width: 100%;
+
+            .project_wrap {
+                
+                padding-left: 0;
+                padding-right: 15px;
+            }
+
+            .slick-active {
+                &:last-child {
+                    padding-right: 0;
+                }
+            }
+
+            .slick-arrow {
+                display: block;
+                right: -12px;   
+                top: auto;   
+                left: auto; 
+                opacity: 1;
+                z-index: 2;
+
+                &.slick-next {
+                    top: 60%;         
+
+                    @include media (max-width, 1024px){
+                        top: 45%;
+                    }
+                }
+
+                &.slick-prev {
+                    bottom: 0;   
+                }
+
+        
+                @include media (max-width, 1023px){				
+                    right: 12px;
+                    &.slick-next {
+                        top: 60%;   
+                    }
+    
+                    &.slick-prev {
+                        bottom: 15%;   
+                    }
+                }
+            }
+            .project_info {
+                width: 75%;
+                padding: 15px;
+                
+                .address {
+                    font-size: 14px;
+                    color: $color-grey;
+                    display: flex;
+                    align-content: center;
+                    align-items: center;
+                    &:before {
+                        height: 18px;
+                        content: url(../img/icon/icn-marker.svg);
+                    }
+                }
+            }
+
+            .button {
+                width :100%;
+            }
+        }
+    }
+
+    .button_section {
+
+        .buttons {
+
+            display: flex;
+            flex-direction: column;
+            .button {
+                position:relative;
+                margin: 1px 1px 0 1px !important;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:after {
+                    content: url(../img/icon/icn-double-chev-right.svg);
+                    position:absolute;
+                    right: 5%;
+                    height: 20px;
+                }
+            }
+
+        }
+    }
+    
+    .recent_projects {
+        h4 {
+            font-family: $heading-font-family;
+            font-size: 13px;
+            letter-spacing: 1px;
+            line-height: 1.4;
+            color: $color-white;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+    }
+
+    @include media (max-width, 1023px){
+        overflow: auto;
+        height: auto;
+
+        .text-group {            
+            align-items: center;
+        }
+
+        header {
+            .hsnav-s4 {
+
+                .navbar {
+                    background: $color-white;
+                    min-height: auto;
+                }
+            } 
+        }
+        footer {
+            position: unset;
+        }
+    }
+
 }

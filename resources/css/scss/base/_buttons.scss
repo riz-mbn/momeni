@@ -1,15 +1,18 @@
 
 /* Buttons */
 .button{
-    padding: 10px 30px;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 5px;
+    font-size: 13px;
+    font-weight: 400;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 0 !important;
     line-height: 28px;
     transition:all 0.5s ease;
-    border-radius: 3px;
-    min-width: 240px;
+    border-radius: 0;
+    min-width: 200px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    
 
     &:hover {
         color: $color-white;
@@ -34,7 +37,24 @@
     
     &.full, &.na {
         pointer-events: none;
-    }    
+    }  
+    
+    
+    &.gradient {
+        color: $color-white;
+        border-color: $color-primary;
+        background: linear-gradient(180deg, #00451A 0%, $color-primary 100%);
+
+        &:hover {
+            background: none;
+            color: $color-primary;
+            border-color: $color-primary;
+            
+            i.dark {
+                color: $color-white;
+            }
+        }
+    }
         
     &.hollow {
         background: none;
@@ -63,13 +83,13 @@
         
         &.hollow {
             background: none;
-            color: $color-primary;
+            color: $color-white;
             border-color: $color-primary;
     
             &:hover {
-                background: $color-primary;
-                border-color: $color-primary;
                 color: $color-white;
+                border-color: $color-primary;
+                background: linear-gradient(180deg, #00451A 0%, $color-primary 100%);
 
                 i.dark {
                     color: $color-white;

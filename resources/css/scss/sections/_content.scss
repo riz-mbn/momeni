@@ -1,4 +1,5 @@
 
+
 h1 {
     font-weight: 900;
     font-size: 90px;
@@ -20,4 +21,30 @@ h1 {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $color-white;
 
+}
+
+@include media (max-width, 1023px){
+    body {
+        &.admin-bar {
+
+            header .hsnav-s4{
+                &.sticky {
+                    top: 46px !important;
+                }
+            }
+
+        }
+    }
+
+}
+
+section {
+    padding: 30px 0;
+
+    &.hero {
+        padding-bottom: 0;
+    }
+    &.button_section {
+        padding-top: 0;
+    }
 }

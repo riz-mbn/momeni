@@ -3,8 +3,10 @@
     </main>
     
     <footer id="footer" class="footer">
-            <div class="copyright">Copyright <?php echo date('Y'); ?> &copy; Company. ALL Rights Reserved.</div>
+        <div class="grid-container">
+            <div class="copyright">&copy;  <?php echo date('Y'); ?>. <span class="text-primary">Momeni</span> <span class="text-white">Construction Inc</span>. ALL Rights Reserved.</div>
             <div class="designby"><a href="https://www.mybizniche.com/phoenix-web-design/" target="_blank">Website Design</a> by: My Biz Niche</div>
+        </div>
     </footer>
 </div>  
 
