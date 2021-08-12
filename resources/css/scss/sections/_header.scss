@@ -10,11 +10,6 @@ header {
 /* Header Sticky Nav Style 4 */
 header {
 	z-index: 9999;
-
-	&.sticky-container{		
-		position: absolute;
-		top: 0;
-	}
 	
 	&.overlap {
 		position: absolute;

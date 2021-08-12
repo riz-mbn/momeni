@@ -15,6 +15,11 @@
 
 
         }
+
+        &.sticky-container{		
+            position: absolute;
+            top: 0;
+        }
     }
 
     .text-group {
