@@ -20,7 +20,7 @@ $projects = new WP_Query( $projects_args );
         <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/slide-2.jpg" alt="" height=""></figure>
         <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/slide-3.jpg" alt="" height=""></figure>
         <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/slide-4.jpg" alt="" height=""></figure>
-        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/slide-5.jpg" alt="" height=""></figure>
+        <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/slide5.jpg" alt="" height=""></figure>
     </div>
     <div class="hero-caption order_1">
         <div class="grid-container">
