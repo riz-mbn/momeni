@@ -1,4 +1,6 @@
-
+#wrapper {
+    overflow: hidden;
+}
 
 h1 {
     font-weight: 900;
@@ -42,7 +44,7 @@ section {
     padding: 30px 0;
 
     &.hero {
-        padding-bottom: 0;
+        padding: 0;
     }
     &.button_section {
         padding-top: 0;

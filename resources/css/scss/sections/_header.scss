@@ -33,8 +33,7 @@ header {
 		}
 		
 		&.sticky {
-			position: absolute;
-			position: fixed;
+			position: unset;
 			left: 0;
 			right: 0;
 			top: 0;
@@ -384,7 +383,7 @@ header {
 									width: 26px;
 									height: 20px;
 									background-repeat: no-repeat;
-									background-image: url(../img/icon/icn-double-chev-right.svg);
+									background-image: url(../img/icon/icn-double-chev-right.svg) !important; 
 									display: inline-block;
 									margin-right: 10px;
 									left: 23px;
@@ -445,7 +444,7 @@ header {
 	@include media (max-width, 1023px){
 		
 		&.sticky-container {
-			position: unset;
+			position: unset !important;
 		}
 	}
 }
@@ -540,7 +539,7 @@ header {
 			&.slick-next{				
 			
 				&:before{ 
-					background: url(../img/icon/icn-slick-chev-right.svg) no-repeat center;
+					background: url(../img/icon/icn-slick-chev-right.svg) no-repeat center !important;
 					background: linear-gradient(90deg, rgba(64, 65, 65, 0) 0%, rgba(0, 26, 10, 0.65) 100%);
 				}
 			}
@@ -548,7 +547,7 @@ header {
 			&.slick-prev{
 
 				&:before{ 
-					background: url(../img/icon/icn-slick-chev-left.svg) no-repeat center;
+					background: url(../img/icon/icn-slick-chev-left.svg) no-repeat center !important;
 					background: linear-gradient(270deg, rgba(64, 65, 65, 0) 0%, rgba(0, 26, 10, 0.65) 100%);
 				}
 
@@ -561,7 +560,7 @@ header {
 		color:$color-white;
 		left: 0;
 		right: 0;
-		bottom: 30px;
+		bottom: 60px;
 		z-index: 999;
 
 		h1 {
@@ -621,14 +620,15 @@ header {
 				z-index: -1;
 				left: 0;
 				bottom: 0;
-				height: 65%;
-				width:calc((100vw - 50px) / 2);
+				height: 70%;
+				width:calc((100vw - 40px) / 2);
 				background: $color-black;
 				background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.7) 100%);
 			}
 
 			.post_group {		
-				padding: 65px 50px 50px 0;
+				padding: 65px 40px 50px 0;
+				width: 100%;
 				position: relative;
 			}
 
@@ -662,6 +662,13 @@ header {
 						margin-bottom: 0;
 						width: 100%;
 						padding: 20px 30px 0;
+						a {
+							color: $color-white;
+
+							&:hover{
+								color: $color-primary;
+							}
+						}
 					}
 				}
 			}
@@ -686,7 +693,7 @@ header {
 		flex-direction: column;
 
 		.hero-caption {
-			padding-top: 0;
+			padding-top: 30px;
 			padding-bottom: 20px;
 			position: unset;
 
