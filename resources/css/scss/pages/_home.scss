@@ -67,6 +67,8 @@
     }
 
     .post_slider {
+        display: flex;
+        flex-flow: row wrap;
 
         &.slick-slider{
             padding: 0 !important;
