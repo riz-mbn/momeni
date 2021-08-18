@@ -148,6 +148,7 @@ function mbn_myme_types($mime_types){
 add_filter('upload_mimes', 'mbn_myme_types');
 
 
+require MBN_DIR_PATH."/mbn-login/setup.php";
 require MBN_DIR_PATH.'/includes/post-types.php';
 require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
