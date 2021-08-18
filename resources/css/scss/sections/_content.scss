@@ -9,26 +9,6 @@ body {
     overflow: hidden;
 }
 
-header {
-    .hsnav-s4{
-
-        &.is-stuck {
-            box-shadow: none;
-            background: transparent;
-        }
-
-
-    }
-
-    &.sticky-container{		
-        position: absolute;
-        top: 0;
-        width: 100%;
-        margin: 0 auto;
-    }
-}
-
-
 .content {
     min-height: 70vh;
 }
