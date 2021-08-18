@@ -3,7 +3,7 @@
     get_header();
 
 ?>
-<section class="page-content">
+<section class="sec-thankyou page-content">
 	<div class="grid-container">		
 		<div class="grid-x grid-margin-x">
 			<div class="cell large-12">
