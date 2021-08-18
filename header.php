@@ -11,7 +11,6 @@
 
 </head>
 <body <?php body_class() ?>>
-
 <div id="wrapper"> 
     <header id="header" data-sticky-container data-toggler=".show-menu">
         <div class="hsnav-s4 sticky" data-sticky data-options="marginTop:0">
@@ -31,11 +30,11 @@
                     <div class="navright">
                         <nav class="navmenu show-for-large">
                             <ul class="menu align-right dropdown" data-dropdown-menu>
-                                <li class="current-menu-item"><a href="<?php echo home_url() ?>">Home</a></li>
-                                <li><a href="<?php echo home_url().'/company' ?>">Company</a></li>
-                                <li><a href="<?php echo home_url().'/services' ?>">Services</a></li>
-                                <li><a href="<?php echo home_url().'/portfolio' ?>">Portfolio</a></li>
-                                <li><a href="<?php echo home_url().'/contact' ?>">Contact</a></li>
+                                <li class="menu-item current-menu-item"><a href="<?php echo home_url() ?>">Home</a></li>
+                                <li class="menu-item" ><a href="<?php echo home_url().'/company' ?>">Company</a></li>
+                                <li class="menu-item" ><a href="<?php echo home_url().'/services' ?>">Services</a></li>
+                                <li class="menu-item" ><a href="<?php echo home_url().'/portfolio' ?>">Portfolio</a></li>
+                                <li class="menu-item" ><a href="<?php echo home_url().'/contact' ?>">Contact</a></li>
                             </ul>
                         </nav>
                         <div class="navutil">
@@ -62,4 +61,10 @@
         </div>            
     </header>    
    
-    <main id="content" class="content">
+
+<?php 
+	$page_type = mbn_page_type();
+
+?>
+
+    <main id="content" class="content <?php echo $page_type; ?>">

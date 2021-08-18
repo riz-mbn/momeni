@@ -67,7 +67,7 @@ function mbn_enqueue_scripts(){
     wp_register_style('inlinecss-handle', false);
     wp_enqueue_style('inlinecss-handle');
 
-    wp_enqueue_style('font-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap', [], $wp_version);
+    wp_enqueue_style('font-opensans', 'https://fonts.googleapis.com/css?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600;1,700&display=swap', [], $wp_version);
 
 	//Global JS
 	wp_deregister_script( 'jquery' );
@@ -175,7 +175,7 @@ if ( ! function_exists( 'google_fonts_url' ) ) :
 
 		/* translators: If there are characters in your language that are not supported by this font, translate this to 'off'. Do not translate into your own language. */
 		if ( 'on' !== esc_html_x( 'on', 'Open Sans font: on or off', 'mbn_theme' ) ) {
-			$fonts[] = 'Open+Sans:ital,wght@0,400;0,700;1,400;1,600;1,700&display=swap';
+			$fonts[] = 'Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,600;1,700&display=swap';
 		}
 
 		if ( $fonts ) {
@@ -202,3 +202,29 @@ function preload_fonts() {
 </script>
     <?php
 } 
+
+
+
+/** Get page type, eg. for customizer option */
+function mbn_page_type() {
+	global $template;
+
+	if ( strpos( $template, 'company.php' ) ) {
+		return 'company';
+	}
+	if ( is_single() ) {
+		return 'single';
+	}
+	if ( is_404() ) {
+		return '404';
+	}
+	if ( is_page() ) {
+		return 'single_page';
+	}
+	if ( is_woocommerce() ) {
+		return 'shop';
+	}
+	if ( is_search() ) {
+		return 'blog';
+	}
+}

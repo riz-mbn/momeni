@@ -3,6 +3,7 @@
     var app = {
         onReady: function(){
             app.customDropdown();
+            app.navbarActive();
         },	
         onLoad: function(){
             $(document).foundation();
@@ -23,6 +24,21 @@
                 $('#header').removeClass('show-account');
                 $('#header').removeClass('show-menu');
             });
+
+                    
+
+            // $('.menu .menu-item').find('a').filter(function(){
+            //     var text = $(this).text().toLowerCase();
+            //     var pageType = $('.page-content').data('type');
+
+
+            //     alert( window.location.pathname);
+            //     if( text === pageType ) {
+            //         $(this).closest('.menu-item').addClass('current-menu-item').siblings().removeClass('current-menu-item');
+            //     }
+
+            // });
+            
 
             $(window).scroll(function() {
                 var getTop = $('.courses_results').offset().top;
@@ -80,8 +96,16 @@
             $('.custom_dropdown > li').click(function(){
                 $(this).toggleClass('hover');
             });
-
             
+        },
+
+        navbarActive: function(){            
+            /* Navbar Active Class */
+            
+            $('.menu .menu-item').find('a').filter(function() {
+                var href = $(this).attr('href') + '/';
+                return  href === location.href.replace(/#.*/, "");
+            }).closest('.menu-item').addClass('current-menu-item').closest('.menu-item').siblings().removeClass('current-menu-item');
         }
         
         
