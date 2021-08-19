@@ -99,12 +99,6 @@ header {
 			}
 
 
-			@include media(max-width, 1023px) {
-				
-	
-
-			}
-
 			@include media(max-width, 767px) {
 				.top-left {
 					display: none;
@@ -442,6 +436,13 @@ header {
 			&:after {
 				display: none
 			}
+
+
+			&.is-stuck {
+				top: 0 !important;
+
+			}
+
 		}
 
 

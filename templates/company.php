@@ -8,7 +8,7 @@
 		<div class="grid-x grid-margin-x cols2-s4">
             <div class="cell xlarge-4 large-6 medium-12 align-self-middle col-copy ">
 				<p class="small">Our Company</p>
-                <h2><span class="highlight">Momeni Construction</span> is a <br/>full-service <span class="strong"><em>commercial construction</em></span> and <span class="strong"><em>construction management</em></span> firm based in Las Vegas, Nevada, since 2000.</h2>
+                <h2><span class="highlight">Momeni Construction</span> is a full-service <span class="strong"><em>commercial construction</em></span> and <span class="strong"><em>construction management</em></span> firm based in Las Vegas, Nevada, since 2000.</h2>
                 <p class="show-for-large">We operate in <span class="strong">Nevada, California, Arizona,</span> and <span class="strong">Utah</strong>, and have <span class="strong">completed numerous projects of varying sizes totaling hundreds of millions of dollars.</span></p>
 				<a href="/portfolio" class="button primary hollow show-for-large">View Our Work</a>
             </div>	

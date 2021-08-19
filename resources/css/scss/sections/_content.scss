@@ -455,7 +455,7 @@ section {
 
             header .hsnav-s4{
                 &.sticky {
-                    top: 46px !important;
+                    top: 46px;
                 }
             }
 
@@ -488,7 +488,7 @@ section {
                     padding: 20px 0;
                 }
     
-                .col-copy {
+                .col-image {
                     margin-left: 0;
                     margin-right: 0 !important;
                 }
