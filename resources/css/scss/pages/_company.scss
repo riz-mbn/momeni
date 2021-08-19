@@ -1,0 +1,196 @@
+
+
+.company{
+
+    .our_company {
+        padding-bottom: 0;
+        margin-top: -200px;
+
+        .cols2-s4 {
+            padding: 0;
+            .col-image {                    
+                margin-left: 0;
+                margin-right: calc((-100vw - -1300px) / 2);
+            }
+        }
+    }
+        
+    .about_company {
+        position:relative;
+        z-index: -1;
+        padding: 0;
+
+        .col-copy {
+            background: rgba(64, 65, 65, 0.5);
+            margin-left: 20px;
+            margin-right: calc((-100vw - -860px) / 2) !important;
+            .text-group {
+                width: 70%;
+                padding: 80px 70px 40px;
+            }
+        }
+        .cols2-s4 {
+            padding-bottom: 0;
+        }
+    }
+
+    .our_team {
+        padding: 0;
+
+        .cols2-s4 {
+            padding-bottom: 0;
+            background: rgba(0,0,0,0.78);
+            
+            .col-image {
+                margin-left: 20px;
+                margin-right: calc((-100vw - -888px) / 2) !important;
+        
+                img {
+                    width: 100%;
+                }
+            }
+
+            .text-group {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .sec_cta {
+        padding: 0;
+
+        .cols2-s4 {
+            padding-bottom: 0;
+        }
+
+        .col-cta {
+            display: flex;
+        }
+        .cta-group {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            .button {
+                margin-left: 5px;
+                margin-right: 5px;
+                min-width: 180px;
+                margin-bottom: 0 !important;
+            }
+        }
+        .text-group {
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-left: -5px;
+
+            &:before {
+                content: '';
+                height: 2px;
+                background: -webkit-gradient(linear, left bottom, left top, from(#00A84F), to(#00A84F)), -webkit-gradient(linear, left top, right top, from(#00A84F), to(#00A84F));
+                background: linear-gradient(0deg, #00A84F, #00A84F), linear-gradient(90deg, #00A84F 0%, #00A84F 100%);
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                right: 0;
+            }
+
+            a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                color: #fff;
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                font-weight: normal;
+                font-size: 16px;
+                letter-spacing: 1px;
+                margin: 15px 0 15px 15px;
+
+                span {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .float_img {
+
+        &.about_1 {
+            right: 0;
+        }
+
+        &.about_2 {
+            top: -20%;
+            left: 0;
+        }
+    }
+}
+
+
+@include media(max-width, 1440px){
+        
+    .company {
+            
+        .our_company {
+            margin-top: 0;
+
+        }
+
+    }
+}
+
+
+@include media(max-width, 1280px){
+    .company {
+        
+        .our_company {
+            .col-image {
+                margin: 0px -40px 0 0 !important;
+            }
+        }
+    }
+}
+
+@include media (max-width, 1023px){
+    .company {
+        
+        .our_company {
+            margin-top: 0;
+
+        }
+
+        .our_team {
+            .cols2-s4 {
+                .text-group {
+                    padding: 20px 0;
+                }
+    
+                .col-image {
+                    margin-left: 0;
+                    margin-right: 0 !important;
+                }
+            }
+        }
+
+        .about_company {
+    
+            .col-copy {
+                background: transparent;
+                margin-left: 0;
+                margin-right: 0 !important;
+                .text-group {
+                    width: 100%;
+                    padding:20px 0;
+                }
+            }
+            .cols2-s4 {
+                padding-bottom: 0;
+            }
+        }
+
+    }
+
+}

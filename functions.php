@@ -213,6 +213,10 @@ function mbn_page_type() {
 	if ( strpos( $template, 'company.php' ) ) {
 		return 'company';
 	}
+
+	if ( strpos( $template, 'services.php' ) ) {
+		return 'services';
+	}
 	if ( is_single() ) {
 		return 'single';
 	}
