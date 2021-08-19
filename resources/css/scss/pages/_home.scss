@@ -3,40 +3,7 @@
     height: 100%;
     padding: 0px;
     margin: 0px;
-    overflow: hidden;
-
-    .text-group {
-        flex-direction: column;
-        display: flex;
-        width: 100%;
-        position: relative;
-        margin-left: -5px;
-
-        a {
-            display: flex;
-            color: $color-white;
-            font-family: $heading-font-family;
-            font-weight: normal;
-            font-size: 16px;
-            letter-spacing: 1px;
-            margin: 15px 0 15px 15px;
-
-            span {					
-                margin-right: 10px;
-            }
-        }
-        
-            
-        &:before {
-            content: '';
-            height: 2px;
-            background: linear-gradient(0deg, $color-primary , $color-primary ),linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            right: 0;
-        }
-    }
+    overflow: hidden;    
 
     footer {
         position: fixed;
@@ -197,30 +164,6 @@
         }
     }
 
-    .button_section {
-
-        .buttons {
-
-            display: flex;
-            flex-direction: column;
-            .button {
-                position:relative;
-                margin: 1px 1px 0 1px !important;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-
-                &:after {
-                    content: url(../img/icon/icn-double-chev-right.svg);
-                    position:absolute;
-                    right: 5%;
-                    height: 20px;
-                }
-            }
-
-        }
-    }
-    
     .recent_projects {
         h4 {
             font-family: $heading-font-family;

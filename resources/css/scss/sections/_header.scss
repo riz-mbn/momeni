@@ -23,15 +23,6 @@ header {
 		position: relative;
 		z-index: 999999 !important;
 
-		&:after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			right: 0;
-			border-bottom: 1px solid rgba(255,255,255,0.3);
-			width:74.2%;
-		}
-		
 		&.sticky {
 			position: unset;
 			left: 0;
@@ -40,7 +31,7 @@ header {
 		}
 		&.is-stuck {
 			position: fixed;
-			background: $color-white;
+			background: $color-black !important;
 			box-shadow: 0 3px 6px 0 rgba($color-black, 0.16);
 		}
 
@@ -156,6 +147,20 @@ header {
 				&.show-menu {
 					display: none;
 				}
+			}
+
+			.navleft {
+				position: relative;
+						
+				&:after {
+					content: '';
+					position: absolute;
+					bottom: 0;
+					left: 100%;
+					width: calc((100vw - -910px) / 2);
+					border-bottom: 1px solid rgba(255,255,255,0.3);
+				}
+				
 			}
 
 			.navmenu {
@@ -287,6 +292,9 @@ header {
 
 
 			@include media(max-width, 1023px) {				
+
+				min-height: 60px;
+				background: $color-white;
 
 				.navleft {
 					float: left;

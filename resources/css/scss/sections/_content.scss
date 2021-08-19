@@ -1,6 +1,6 @@
 body {
     &:not(.home){
-        background: url(../img/bgs/grid.png) repeat center $color-black;
+        background: url(../img/bgs/grid.png) repeat center , linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 100%);
         background-size: cover;
     }
 }
@@ -37,6 +37,8 @@ header {
 
 .content {
     min-height: 70vh;
+    padding: 80px 0;
+    z-index: -1;
 }
 
 h1 {
@@ -89,6 +91,41 @@ p {
     z-index: -1;
 }
 
+.contact_info {
+        
+    .text-group {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        position: relative;
+        margin-left: -5px;
+
+        a {
+            display: flex;
+            color: $color-white;
+            font-family: $heading-font-family;
+            font-weight: normal;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: 15px 0 15px 15px;
+
+            span {					
+                margin-right: 10px;
+            }
+        }
+        
+            
+        &:before {
+            content: '';
+            height: 2px;
+            background: linear-gradient(0deg, $color-primary , $color-primary ),linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            right: 0;
+        }
+    }
+}
 
 .hollow_text {
 
@@ -97,16 +134,119 @@ p {
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: $color-white;
 }
+
 .company{
+
+    .our_company {
+        padding-bottom: 0;
+        margin-top: -200px;
+
+        .cols2-s4 {
+            padding: 0;
+            .col-image {                    
+                margin-left: 0;
+                margin-right: calc((-100vw - -1300px) / 2);
+            }
+        }
+    }
         
     .about_company {
         position:relative;
         z-index: -1;
+        padding: 0;
+
         .col-copy {
             background: rgba(64, 65, 65, 0.5);
+            margin-left: 20px;
+            margin-right: calc((-100vw - -860px) / 2) !important;
             .text-group {
                 width: 70%;
-                padding: 80px 70px;
+                padding: 80px 70px 40px;
+            }
+        }
+        .cols2-s4 {
+            padding-bottom: 0;
+        }
+    }
+
+    .our_team {
+        padding: 0;
+
+        .cols2-s4 {
+            padding-bottom: 0;
+            background: rgba(0,0,0,0.78);
+            
+            .col-image {
+                margin-left: 20px;
+                margin-right: calc((-100vw - -888px) / 2) !important;
+        
+                img {
+                    width: 100%;
+                }
+            }
+
+            .text-group {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    .sec_cta {
+        padding: 0;
+
+        .cols2-s4 {
+            padding-bottom: 0;
+        }
+
+        .col-cta {
+            display: flex;
+        }
+        .cta-group {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            .button {
+                margin-left: 5px;
+                margin-right: 5px;
+                min-width: 180px;
+                margin-bottom: 0 !important;
+            }
+        }
+        .text-group {
+            flex-direction: column;
+            display: flex;
+            width: 100%;
+            position: relative;
+            margin-left: -5px;
+
+            &:before {
+                content: '';
+                height: 2px;
+                background: -webkit-gradient(linear, left bottom, left top, from(#00A84F), to(#00A84F)), -webkit-gradient(linear, left top, right top, from(#00A84F), to(#00A84F));
+                background: linear-gradient(0deg, #00A84F, #00A84F), linear-gradient(90deg, #00A84F 0%, #00A84F 100%);
+                position: absolute;
+                width: 100%;
+                top: 50%;
+                right: 0;
+            }
+
+            a {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                color: #fff;
+                font-family: "neue-haas-grotesk-display", sans-serif;
+                font-weight: normal;
+                font-size: 16px;
+                letter-spacing: 1px;
+                margin: 15px 0 15px 15px;
+
+                span {
+                    margin-right: 10px;
+                }
             }
         }
     }
@@ -118,25 +258,34 @@ p {
         }
 
         &.about_2 {
-            top: -60%;
+            top: -40%;
             left: 0;
         }
     }
 }
 
-@include media (max-width, 1023px){
-    body {
-        &.admin-bar {
+.button_section {
 
-            header .hsnav-s4{
-                &.sticky {
-                    top: 46px !important;
-                }
+    .buttons {
+
+        display: flex;
+        flex-direction: column;
+        .button {
+            position:relative;
+            margin: 1px 1px 0 1px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:after {
+                content: url(../img/icon/icn-double-chev-right.svg);
+                position:absolute;
+                right: 5%;
+                height: 20px;
             }
-
         }
-    }
 
+    }
 }
 
 section {
@@ -156,8 +305,6 @@ section {
 	padding-bottom: 60px;
 	
 	.col-image {
-		margin-right: 90px;
-		margin-left: calc((-100vw - -1440px) / 2);
 
 		img {
 			width: 100%;
@@ -166,7 +313,7 @@ section {
 	.large-order-2 {
 		.col-image {
 			margin-right: calc((-100vw - -1360px) / 2);
-			margin-left: 90px;
+			margin-left: 0;
 		}
 	}
 
@@ -175,7 +322,6 @@ section {
 			margin-bottom: 0;
 		}
 	}
-
 
 	@include media(max-width, 1280px){
 		.col-image {
@@ -261,3 +407,100 @@ section {
 
 	}
 } 
+
+@include media(max-width, 1440px){
+        
+    .company {
+            
+        .our_company {
+            margin-top: 0;
+
+        }
+
+    }
+}
+
+
+@include media(max-width, 1024px){
+    
+    .float_img {
+
+        &.about_2 {
+            top: 0 !important;
+            left: -20% !important;
+        }
+    }
+}
+
+@include media(max-width, 1280px){
+    .company {
+        
+        .our_company {
+            .col-image {
+                margin: 0px -40px 0 0 !important;
+            }
+        }
+    }
+}
+
+@include media (max-width, 1023px){
+    body {
+        &.admin-bar {
+
+            header .hsnav-s4{
+                &.sticky {
+                    top: 46px !important;
+                }
+            }
+
+        }
+    }
+    
+    .grid-container {
+        padding-left: 30px;
+        padding-right: 30px;
+    } 
+    
+    .contact_info {
+        
+        .text-group {
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    }
+    .company {
+        
+        .our_company {
+            margin-top: 0;
+
+        }
+
+        .our_team {
+            .cols2-s4 {
+                .text-group {
+                    padding: 20px 0;
+                }
+            }
+        }
+
+        .about_company {
+    
+            .col-copy {
+                background: transparent;
+                margin-left: 0;
+                margin-right: 0;
+                .text-group {
+                    width: 100%;
+                    padding:20px 0;
+                }
+            }
+            .cols2-s4 {
+                padding-bottom: 0;
+            }
+        }
+
+    }
+
+}
+
