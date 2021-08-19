@@ -283,6 +283,12 @@ p {
                 right: 5%;
                 height: 20px;
             }
+
+            &.know_our_services {
+                &:after {
+                    display: none;
+                }
+            }
         }
 
     }
@@ -481,6 +487,11 @@ section {
                 .text-group {
                     padding: 20px 0;
                 }
+    
+                .col-copy {
+                    margin-left: 0;
+                    margin-right: 0 !important;
+                }
             }
         }
 
@@ -489,7 +500,7 @@ section {
             .col-copy {
                 background: transparent;
                 margin-left: 0;
-                margin-right: 0;
+                margin-right: 0 !important;
                 .text-group {
                     width: 100%;
                     padding:20px 0;

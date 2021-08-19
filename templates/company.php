@@ -64,7 +64,7 @@
 <section class="button_section hide-for-large"> 
 	<div class="grid-container">	
 		<div class="buttons cta-group order-3 hide-for-large">
-			<a href="<?php echo home_url().'/services' ?>" class="button gradient">Know Our Services</a>
+			<a href="<?php echo home_url().'/services' ?>" class="button gradient know_our_services">Know Our Services</a>
 		</div>
 	</div>
 </section>
