@@ -4,7 +4,7 @@
 
 ?>
 <section class="services_about">
-	<figure class="bg"><img src="<?php echo MBN_ASSETS_URI ?>/img/services_bg.png" alt="" width="1065" height="766"></figure>
+	<figure class="bg show-for-large"><img src="<?php echo MBN_ASSETS_URI ?>/img/services_bg.png" alt="" width="1065" height="766"></figure>
 	<div class="grid-container">		
 		<div class="grid-x grid-margin-x cols2-s4">
             <div class="cell xlarge-6 large-6 medium-12 align-self-middle col-copy ">
@@ -12,7 +12,8 @@
                 <h2><span class="highlight">Momeni Construction</span> offers the full range of construction services,</h2>
                 <p>including design-build, new building construction, site improvement, tenant improvement, post-construction repair, and concrete repair. We are also experienced in virtually any type of construction method and building material, including steel, wood frame, CMU, tilt up, modular, etc.</p>
             </div>	
-            <div class="cell xlarge-6 large-6 medium-12">
+            <div class="cell xlarge-6 large-6 medium-12">				
+				<figure class="bg hide-for-large"><img src="<?php echo MBN_ASSETS_URI ?>/img/services_bg.png" alt="" width="1065" height="766"></figure>
                 <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/services-1.png" alt="" width="507" height="385"></figure>
 				<div class="title_group">
 					<h1 class="hollow_text maskPlay">YOUR VISION</h1>
@@ -23,7 +24,7 @@
 	</div>	
 </section>
 <section class="services_items">
-	<div class="grid-container">	
+	<div class="grid-container">
 		<div class="grid-x grid-margin-x">			
 			<div class="cell xlarge-6 large-6 medium-12">
 				<div class="col-item const_col">
@@ -79,7 +80,7 @@
 							<span class="icon_txt">Multi-Family Residential Buildings</span>
 						</div>
 					
-						<a href="<?php echo home_url().'/contact' ?>" class="button primary hollow show-for-large">Connect With Us</a> 
+						<a href="<?php echo home_url().'/contact' ?>" class="button primary hollow">Connect With Us</a> 
 					</div>
 				</div>
 			</div>
@@ -143,7 +144,7 @@
 							<span class="icon_txt">Project Close-out </span>
 						</div>
 
-						<a href="<?php echo home_url().'/contact' ?>" class="button primary hollow show-for-large">Connect With Us</a>
+						<a href="<?php echo home_url().'/contact' ?>" class="button primary hollow">Connect With Us</a>
 					</div>					
 				</div>
 			</div>

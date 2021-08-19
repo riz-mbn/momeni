@@ -38,7 +38,7 @@ header {
     z-index: -1;
 
     @include media (max-width, 1023px){
-        padding: 40px 0;
+        padding: 40px 0 100px;
     }
 }
 

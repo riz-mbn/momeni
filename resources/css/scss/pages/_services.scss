@@ -80,5 +80,61 @@
 
     }
 
+    @include media (max-width, 1023px){
+        p {
+            color: #E1E1E1;
+        }
+
+        figure {
+            &.bg {
+                position: relative;
+                right: -30px;
+            }
+        }
+
+        h1.hollow_text {
+            font-size: 13vw;
+        }
+
+        h1.subtitle {
+            font-size: 11vw;
+        }
+
+        .services_about {
+            .cell {
+                padding-top: 30px;
+                position: relative;
+
+                &:not(.col-copy) {
+                    align-items: normal;
+    
+                    .col-image {
+                        width: 70%;
+                        position: absolute;
+                        top: 27%;
+                        z-index: -1;
+                    }
+                }
+    
+            }
+        }
+
+        .button {
+            width: 100%;
+        }
+
+        .services_items {
+
+            .title_group {
+                margin-top: -100px;
+            }
+
+            .cell {
+                padding-top: 30px;
+            }
+        }
+    
+    }
+
 
 }
