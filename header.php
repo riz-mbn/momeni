@@ -38,11 +38,11 @@
                             </ul>
                         </nav>
                         <div class="navutil">
-                            <a href="mailto:info@momeniconstruction.com" class="navemail hide-for-large">
-                                <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure>
-                            </a>
                             <a href="tel:702248800" class="navphone hide-for-large" >
                                 <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-envelope.svg" alt="" width="24" height="24" /></figure>
+                            </a>
+                            <a href="mailto:info@momeniconstruction.com" class="navemail hide-for-large">
+                                <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure>
                             </a>
                             <a class="navicon hide-for-large" data-toggle="header">mobile menu</a>
                         </div>
