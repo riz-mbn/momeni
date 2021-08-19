@@ -603,6 +603,39 @@ header {
 			bottom: 60px;
 			padding-left: 5%;
 		}
+		
+		.text-group {
+			flex-direction: column;
+			display: flex;
+			width: 100%;
+			position: relative;
+			margin-left: -5px;
+	
+			a {
+				display: flex;
+				color: $color-white;
+				font-family: $heading-font-family;
+				font-weight: normal;
+				font-size: 16px;
+				letter-spacing: 1px;
+				margin: 15px 0 15px 15px;
+	
+				span {					
+					margin-right: 10px;
+				}
+			}
+			
+				
+			&:before {
+				content: '';
+				height: 2px;
+				background: linear-gradient(0deg, $color-primary , $color-primary ),linear-gradient(90deg, $color-primary 0%, $color-primary 100%);
+				position: absolute;
+				width: 100%;
+				top: 50%;
+				right: 0;
+			}
+		}
 
 		.title_group {
 			margin-bottom: -55px;
