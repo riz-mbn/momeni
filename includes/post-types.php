@@ -44,8 +44,8 @@ function projects_post() {
     register_post_type( 'projects_type',
         array(
             'labels'    => array(
-                'name' => __( 'Projects' ),
-                'singular_name' => __('Project')
+                'name' => __( 'Portfolios' ),
+                'singular_name' => __('Portfolio')
             ),
             'public'        => true,
             'has_archive'   => true,
