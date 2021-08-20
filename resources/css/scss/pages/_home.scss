@@ -29,87 +29,6 @@
             padding: 0 !important;
             width: 100%;
 
-            .project_wrap {
-                padding-left: 10px;
-                padding-right: 10px;
-                width: 100%;
-
-                &:hover {
-
-                    .project_thumb {
-                        position: relative;
-                        background: #000;
-
-                        figure {
-                            opacity: 0.4;
-                            transition: all 0.3s ease-in-out;
-                        }
-                    }
-
-                    .project_hover {
-                        opacity: 1;
-                        height: 100%;
-                        padding: 10px;
-
-                        .project_inner {
-                            border: 1px solid #00A84F;
-                            box-sizing: border-box;
-                            height: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            justify-content: center;
-                            padding: 15% 5%;
-                            align-items: center;
-                            text-align: center;
-
-                            p{
-                                letter-spacing: 1px;
-                                font-family: $heading-font-family;
-                                margin-bottom: 0;
-                                font-weight:400;
-
-                                &.title {
-                                   color: $color-white;
-                                   font-size: 13px;
-                                   text-transform: uppercase;
-                                   font-weight: 600;
-                               } 
-
-                               &.address{
-                                   color: #aaaaaa;
-                                   font-size: 14px;
-                                    display: flex;
-                                    align-items: center;    
-
-                                   &:before {
-                                        height: 18px;
-                                        content: url(../img/icon/icn-marker.svg);
-
-                                   }
-                               }
-                            }
-                        }
-                    }
-
-                }
-            }
-
-            .project_thumb{
-                position:relative;
-            }
-
-            .project_hover{
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                margin: auto;
-                transform: translate(-50%, -50%);
-                z-index: 1;
-                -webkit-backface-visibility: hidden;
-                opacity: 0;
-                width: 100%;
-            }
-
             .slick-active {
                 &:last-child {
                     padding-right: 0;
@@ -145,22 +64,6 @@
     
                     &.slick-prev {
                         bottom: 15%;   
-                    }
-                }
-            }
-            .project_info {
-                width: 75%;
-                padding: 15px;
-                
-                .address {
-                    font-size: 14px;
-                    color: $color-grey;
-                    display: flex;
-                    align-content: center;
-                    align-items: center;
-                    &:before {
-                        height: 18px;
-                        content: url(../img/icon/icn-marker.svg);
                     }
                 }
             }
