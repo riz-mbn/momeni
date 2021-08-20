@@ -48,15 +48,17 @@ $projects = new WP_Query( $projects_args );
 
                                 ?>
                                     <div class="cell large-6 align-self-middle">
-                                        <a class="project_wrap" href="<?php echo esc_url(get_the_permalink()); ?>">
-                                            <div class="project_thumb">                                                             
-                                                <div class="project_hover">
-                                                    <div class="project_inner">
-                                                        <p class="title"><?php echo esc_html($title) ?></h4>
-                                                        <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+                                        <a class="" href="<?php echo esc_url(get_the_permalink()); ?>">
+                                            <div  class="project_wrap" href="<?php echo esc_url(get_the_permalink()); ?>">
+                                                <div class="project_thumb">                                                             
+                                                    <div class="project_hover">
+                                                        <div class="project_inner">
+                                                            <p class="title"><?php echo esc_html($title) ?></h4>
+                                                            <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+                                                        </div>
                                                     </div>
-                                                </div>
-                                                <figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" height="180" width="330" /></figure>
+                                                    <figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" height="180" width="330" /></figure>
+                                                </div> 
                                             </div>   
                                         </a>
                                     </div>
