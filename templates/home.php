@@ -48,7 +48,7 @@ $projects = new WP_Query( $projects_args );
 
                                 ?>
                                     <div class="cell large-6 align-self-middle">
-                                        <div class="project_wrap">
+                                        <a class="project_wrap" href="<?php echo esc_url(get_the_permalink()); ?>">
                                             <div class="project_thumb">                                                             
                                                 <div class="project_hover">
                                                     <div class="project_inner">
@@ -58,7 +58,7 @@ $projects = new WP_Query( $projects_args );
                                                 </div>
                                                 <figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" height="180" width="330" /></figure>
                                             </div>   
-                                        </div>
+                                        </a>
                                     </div>
                                     <?php 
                                 wp_reset_postdata();
