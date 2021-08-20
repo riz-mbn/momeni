@@ -86,6 +86,9 @@ function mbn_enqueue_scripts(){
     wp_enqueue_style('slick', MBN_ASSETS_URI.'/vendor/slick/slick.css', [], $wp_version);
     wp_enqueue_script('slick', MBN_ASSETS_URI.'/vendor/slick/slick.min.js', [], false);
 
+    // Isotope
+    wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/isotope/isotope.min.js', [], $wp_version);
+
     // Nicescroll
     // wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/jquery.nicescroll.min.js', [], $wp_version);
 
@@ -216,6 +219,9 @@ function mbn_page_type() {
 
 	if ( strpos( $template, 'services.php' ) ) {
 		return 'services';
+	}
+	if ( strpos( $template, 'portfolio.php' ) ) {
+		return 'portfolio';
 	}
 	if ( is_single() ) {
 		return 'single';

@@ -1,6 +1,6 @@
 body {
     &:not(.home){
-        background: url(../img/bgs/grid.png) repeat center , linear-gradient(360deg, rgba(0,0,0,1) 0%, rgba(17,17,17,1) 100%);
+        background: url(../img/bgs/grid.png) repeat center , #111;
         background-size: cover;
     }
 }
@@ -36,7 +36,6 @@ header {
     position: relative;
     min-height: 70vh;
     padding-bottom: 80px;
-    z-index: -1;
 
     @include media (max-width, 1023px){
         padding: 40px 0 100px;
