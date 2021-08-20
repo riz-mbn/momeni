@@ -197,6 +197,9 @@ p {
             figure {
                 opacity: 0.4;
                 transition: all 0.3s ease-in-out;
+                img {
+                    width: 100%;
+                }
             }
         }
 

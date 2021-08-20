@@ -2,12 +2,19 @@
 .portfolio {
 
     .portfolio_about {
+        padding: 0;
 
         .cols2-s4 {
 
             padding-bottom: 0;
             height: 120px;
             justify-content: center;
+        }
+
+        .grid-container {            
+            display: flex;
+            align-items: center;
+            height: 120px;
         }
     }
 
@@ -67,9 +74,26 @@
 
     }
 
-    @include media (max-width, 1023px){
-        
+    @include media (max-width, 1024px){        
     
+        .portfolio_items {
+            .portfolio_item {
+                width: 50%;
+            }
+
+        }
+
+    }
+
+    @include media (max-width, 1023px){        
+    
+        .portfolio_items {
+            .portfolio_item {
+                width: 100%;
+            }
+
+        }
+
     }
 
 

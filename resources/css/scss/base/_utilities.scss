@@ -207,43 +207,104 @@
 		position: relative;
 
 		.pagination  {
+			margin-top: 1rem;
 			display: flex;
 			justify-content: center;
 			flex-direction: row;
 			align-items: center;
 				
-			a, button {
-				display: block;
-				padding: 0.1875rem 0.625rem;
-				border-radius: 0;
-				color: #fff;
-			}
 
-			.prev,
-			.next {
-				&:hover {
-					background: transparent;
+			.page-numbers {	
+				
+				&:not(.prev):not(.next):not(.current){
+
+					
+					font-size: 0;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					padding: 0;
+					background: $color-white;
+					display: flex;
+					align-items: center;
+					justify-content: center; 
+					margin: 0 20px;
+					
+					&:before {						
+						content: '';		
+						width: 20px;
+						height: 20px;
+						border-radius: 50%;
+						border: 0;
+						cursor: pointer;
+						padding: 10px;
+						background: transparent;
+					}						
+						
+					&:hover {		
+							
+						background: $color-primary;
+						&:before {				
+							border: 1px solid $color-white;
+						}				
+
+					}
+
 				}
-			}
-		
-			.prev {
-				font-size: 0;
-				&:before {
-					content: url(../img/icon/icn-slick-chev-left.svg);
+				&.current {
+					font-size: 0;
+					width: 4px;
+					height: 4px;
+					border-radius: 50%;
+					padding: 0;
+					background: $color-primary;
+					display: flex;
+					align-items: center;
+					justify-content: center; 
+					margin: 0 10px;
+
+					&:before {						
+						content: '';		
+						width: 20px;
+						height: 20px;
+						border-radius: 50%;
+						border: 1px solid $color-white;
+						cursor: pointer;
+						padding: 10px;
+						background: transparent;
+					}
+				}
+
+				&.prev,
+				&.next {
+					top: 40%;
+					font-size: 0;
+					&:hover {
+						background: transparent;
+					}
+					&:after {
+						display: none;
+					}
+				}
+			
+				&.prev {
 					position: absolute;
 					left: -10%;
-					top: 50%;
+					&:before {
+						content: url(../img/icon/icn-slick-chev-left.svg);
+					}
 				}
-			}
-			.next {
-				font-size: 0;
-				&:before {
-					content: url(../img/icon/icn-slick-chev-right.svg);
+
+				&.next {
 					position: absolute;
 					right: -10%;
-					top: 50%;
+					&:before {
+						content: url(../img/icon/icn-slick-chev-right.svg);
+					}
 				}
+
 			}
+			
 		
 		}
 	}

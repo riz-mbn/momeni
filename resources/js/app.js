@@ -81,17 +81,7 @@
                 autoplay: true,
                 autoplaySpeed: 5000,                
             });
-
-            
-            //  $('.grid-slick').slick({                        
-            //     dots: true,
-            //     arrow: true,
-            //     speed: 300,     
-            //     slidesToShow: 4,
-            //     slidesToScroll: 4,
-            //     rows: 3,             
-            // });
-                    
+                                
             // init Isotope
             var $grid = $('.grid').isotope({
                 itemSelector: '.portfolio_item'
@@ -123,6 +113,15 @@
                 $buttonGroup.find('.is-checked').removeClass('is-checked');
                 $( this ).addClass('is-checked');
                 });
+            });
+            
+            // bind filter on select change
+            $('.filter-select').on( 'change', function() {
+                // get filter value from option value
+                var filterValue = this.value;
+                // use filterFn if matches value
+                filterValue = filterFns[ filterValue ] || filterValue;
+                $grid.isotope({ filter: filterValue });
             });
   
 
