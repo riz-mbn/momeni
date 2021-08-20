@@ -79,17 +79,18 @@
                 arrow: true,
                 speed: 300,
                 autoplay: true,
-                autoplaySpeed: 5000,                      
+                autoplaySpeed: 5000,                
             });
 
             
-            $('.grid-slick').slick({                        
-                dots: true,
-                arrow: true,
-                speed: 300,
-                autoplay: true,
-                autoplaySpeed: 5000,                      
-            });
+            //  $('.grid-slick').slick({                        
+            //     dots: true,
+            //     arrow: true,
+            //     speed: 300,     
+            //     slidesToShow: 4,
+            //     slidesToScroll: 4,
+            //     rows: 3,             
+            // });
                     
             // init Isotope
             var $grid = $('.grid').isotope({

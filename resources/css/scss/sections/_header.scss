@@ -152,6 +152,10 @@ header {
 					left: 100%;
 					width: calc((100vw - -910px) / 2);
 					border-bottom: 1px solid rgba(255,255,255,0.3);
+					
+					@include media(max-width, 1440px){
+						width: calc(100vw - 120%);
+					}
 				}
 				
 			}

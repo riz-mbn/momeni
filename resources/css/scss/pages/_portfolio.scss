@@ -25,6 +25,7 @@
         .grid-slick {
             padding: 0;
         }
+        
 
         .button-group {
             display: flex;
@@ -49,6 +50,19 @@
                     background: $color-primary;
                 }
             }
+        }
+
+        .grid {
+            display: flex;
+            flex-wrap: wrap
+        }
+
+        .portfolio_item {
+            width: 25%;
+        }
+
+        .project_wrap {
+            padding: 10px;
         }
 
     }

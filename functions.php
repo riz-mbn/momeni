@@ -232,9 +232,6 @@ function mbn_page_type() {
 	if ( is_page() ) {
 		return 'single_page';
 	}
-	if ( is_woocommerce() ) {
-		return 'shop';
-	}
 	if ( is_search() ) {
 		return 'blog';
 	}

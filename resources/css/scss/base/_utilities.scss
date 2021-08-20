@@ -199,3 +199,51 @@
 	-webkit-animation: maskPlay 0.4s;
 	animation: maskPlay 0.4s;
 }
+
+//pagination {
+	
+	.grid-isotope {
+
+		position: relative;
+
+		.pagination  {
+			display: flex;
+			justify-content: center;
+			flex-direction: row;
+			align-items: center;
+				
+			a, button {
+				display: block;
+				padding: 0.1875rem 0.625rem;
+				border-radius: 0;
+				color: #fff;
+			}
+
+			.prev,
+			.next {
+				&:hover {
+					background: transparent;
+				}
+			}
+		
+			.prev {
+				font-size: 0;
+				&:before {
+					content: url(../img/icon/icn-slick-chev-left.svg);
+					position: absolute;
+					left: -10%;
+					top: 50%;
+				}
+			}
+			.next {
+				font-size: 0;
+				&:before {
+					content: url(../img/icon/icn-slick-chev-right.svg);
+					position: absolute;
+					right: -10%;
+					top: 50%;
+				}
+			}
+		
+		}
+	}

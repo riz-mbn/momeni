@@ -33,38 +33,40 @@ $projects = new WP_Query( $projects_args );
                     <div class="post_group_wrap show-for-large">
                         <div class="post_group grid-x grid-margin-x">
                             <h4 class="label recent_label">Recent Projects</h4>
-                            <div class="post_slider slider_desk show-for-large">
+                            <div class="post_slider slider_desk show-for-large layout_1">
                                 <?php 
-                                while ( $projects->have_posts() ) : $projects->the_post();
+                                if ( $projects->have_posts() ) :
+                                    while ( $projects->have_posts() ) : $projects->the_post();
 
 
-                                $title = get_the_title();
-                                $img_url = get_the_post_thumbnail_url();
-                                $img = wp_get_attachment_image_src( get_post_thumbnail_id( $projects->ID ), 'full' ); 
-                                $url = get_the_permalink();
+                                    $title = get_the_title();
+                                    $img_url = get_the_post_thumbnail_url();
+                                    $img = wp_get_attachment_image_src( get_post_thumbnail_id( $projects->ID ), 'full' ); 
+                                    $url = get_the_permalink();
 
-                                $project_state = get_field('project_state');
-                                $project_city = get_field('project_city');
+                                    $project_state = get_field('project_state');
+                                    $project_city = get_field('project_city');
 
-                                ?>
-                                    <div class="cell large-6 align-self-middle">
-                                        <a class="" href="<?php echo esc_url(get_the_permalink()); ?>">
-                                            <div  class="project_wrap" href="<?php echo esc_url(get_the_permalink()); ?>">
-                                                <div class="project_thumb">                                                             
-                                                    <div class="project_hover">
-                                                        <div class="project_inner">
-                                                            <p class="title"><?php echo esc_html($title) ?></h4>
-                                                            <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+                                    ?>
+                                        <div class="cell large-6 align-self-middle">
+                                            <a class="" href="<?php echo esc_url(get_the_permalink()); ?>">
+                                                <div  class="project_wrap" href="<?php echo esc_url(get_the_permalink()); ?>">
+                                                    <div class="project_thumb">                                                             
+                                                        <div class="project_hover">
+                                                            <div class="project_inner">
+                                                                <p class="title"><?php echo esc_html($title) ?></h4>
+                                                                <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" height="180" width="330" /></figure>
-                                                </div> 
-                                            </div>   
-                                        </a>
-                                    </div>
-                                    <?php 
-                                wp_reset_postdata();
-                            endwhile; ?>
+                                                        <figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" height="180" width="330" /></figure>
+                                                    </div> 
+                                                </div>   
+                                            </a>
+                                        </div>
+                                        <?php 
+                                    wp_reset_postdata();
+                                endwhile; 
+                            endif;?>
                             </div>
                             <h4 class="label viewMore_label"><a href="<?php echo home_url().'/portfolio' ?>">View More</a></h4>
                         </div> 
@@ -99,8 +101,10 @@ $projects = new WP_Query( $projects_args );
 <section class="recent_projects hide-for-large">
     <div class="grid-container">
         <h4>Recent Projects</h4>
-        <div class="post_slider slider_mob">
+        <div class="post_slider slider_mob layout_2">
             <?php 
+
+        if ( $projects->have_posts() ) : 
             while ( $projects->have_posts() ) : $projects->the_post();
 
 
@@ -127,7 +131,8 @@ $projects = new WP_Query( $projects_args );
                 </div>
                 <?php 
             wp_reset_postdata();
-        endwhile; ?>
+            endwhile;
+        endif; ?>
         </div>
     </div>
 </section>
