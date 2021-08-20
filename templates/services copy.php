@@ -167,5 +167,4 @@
     </div>
 </section>
 
-<figure class="float_img about_2 show-for-large"><img src="<?php echo MBN_ASSETS_URI ?>/img/about-2.png" alt="" width="1095" height="619"></figure>
 <?php get_footer() ?>

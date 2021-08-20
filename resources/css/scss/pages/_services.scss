@@ -1,6 +1,16 @@
 
 .services {
 
+    .float_img {
+        
+        &.about_2 {
+            bottom: 0%;
+            left: -5%;
+            width: 40%;
+
+        }
+    }
+
     .contact_info {
         padding-top: 5px;
 
