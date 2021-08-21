@@ -2,14 +2,31 @@
     /* Template Name: Portfolio template */
     get_header();
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-	$projects_args = array(  
-		'post_type' => 'projects_type',
-		'posts_per_page' => 12, 
-		'post_status' => 'publish',
-		'orderby' => 'id',
-		'order' => 'asc',
-		'paged' => $paged
-	);
+
+	if(wp_is_mobile() ){
+
+		$projects_args = array(  
+			'post_type' => 'projects_type',
+			'posts_per_page' => -1, 
+			'post_status' => 'publish',
+			'orderby' => 'id',
+			'order' => 'asc',
+			'paged' => $paged
+		);
+
+	}
+	else {
+
+		$projects_args = array(  
+			'post_type' => 'projects_type',
+			'posts_per_page' => 12, 
+			'post_status' => 'publish',
+			'orderby' => 'id',
+			'order' => 'asc',
+			'paged' => $paged
+		);
+
+	}
 	
 	$projects = new WP_Query( $projects_args );   
 ?>
@@ -76,17 +93,19 @@
 							endforeach;
 						endif;
 					?>">
-						<div class="project_wrap">
-							<div class="project_thumb">                                                     
-								<div class="project_hover">
-									<div class="project_inner">
-										<p class="title"><?php echo esc_html($title) ?></h4>
-										<p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+						<a href="<?php echo esc_url(get_the_permalink()) ?>">
+							<div class="project_wrap">
+								<div class="project_thumb">                                                     
+									<div class="project_hover">
+										<div class="project_inner">
+											<p class="title"><?php echo esc_html($title) ?></h4>
+											<p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+										</div>
 									</div>
+									<figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" /></figure>
 								</div>
-								<figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" /></figure>
 							</div>
-						</div>
+						</a>
 					</div>	
 				<?php 
 				endwhile; ?>
@@ -104,6 +123,7 @@
 				</div>	
 			<?php wp_reset_postdata();
 			endif; ?>
+			<div class="btn_read_more hide-for-large"><button class="button hollow primary">Load More</div>
 			</div>
 		</div>
 	</div>	

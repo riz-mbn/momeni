@@ -39,7 +39,7 @@
                 var sticky = false;
                 var top = $(window).scrollTop();
                     
-                if ( top > 100 ) {
+                if ( top > 0 ) {
                     $('.sticky').addClass('is-stuck');
                     $('.sticky').removeClass('is-anchored');
                     sticky = true;
@@ -123,8 +123,43 @@
                 filterValue = filterFns[ filterValue ] || filterValue;
                 $grid.isotope({ filter: filterValue });
             });
-  
 
+            //Load more
+
+            var $el, $ps, $up, totalHeight;
+
+            $(".grid-isotope .button").click(function() {
+                
+                totalHeight = 0
+
+                $el = $(this);
+                $p  = $el.parent();
+                $up = $p.parent();
+                $ps = $up.find("div:not('.btn_read_more')");
+                
+                // measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+                $ps.each(function() {
+                    totalHeight += $(this).outerHeight();
+                });
+                        
+                $up
+                    .css({
+                    // Set height to prevent instant jumpdown when max height is removed
+                    "height": $up.height(),
+                    "max-height": '100%'
+                    })
+                    .animate({
+                    "height": '100%'
+                    });
+                
+                // fade out read-more
+                $p.fadeOut();
+                
+                // prevent jump-down
+                return false;
+                    
+            });
+  
         },
 
         customDropdown: function() {

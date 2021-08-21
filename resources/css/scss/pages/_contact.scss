@@ -1,0 +1,113 @@
+
+.page-template-contact {
+    header.sticky-container {
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
+    .footer {
+        position: unset;
+    }
+    
+}
+
+.contact {
+    min-height: 120vh;
+
+    &.content {
+        padding-bottom: 0;
+    }
+
+    .sec-contact {
+        padding: 0;
+        height: 120vh;
+        position: relative;
+        margin-top: 50px;
+
+        .map_bg{
+            width: 100%;
+            height: 100%;
+            position: relative;
+            top: 0;
+            right: 0;
+            -webkit-mask-image: -webkit-gradient(linear, left 30%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+            z-index: -1;
+        }
+    
+        .map_caption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            z-index: 999;
+
+            .grid-x {
+                align-items: flex-end;
+            }
+        
+            .contact_form {
+                background: rgba(0,0,0,0.9);   
+                padding: 50px;
+
+                h3 {
+                    color: $color-primary;
+                    font-family: $body-font-family;
+                    font-size: 32px;
+                    font-weight: 300;
+                    
+                }
+                                
+                #field_1_4 {
+
+                    .gfield_label  {
+                        display: none;
+                    }
+
+                }
+
+                select {
+                    background: url(../img/icon/icn-chev-down) no-repeat 90% 50% rgba(255, 255, 255, 0.05) !important;
+                }
+            }
+
+            .col-blurb {
+                display: flex;
+                background: rgba(64, 65, 65, 0.9);
+
+                .text-wrap{
+                    padding: 35px;
+                    display: flex;
+                    align-items: flex-start;
+                    flex-direction: column;
+                    
+                    .icon_blurb {    
+                        align-items: flex-start;        
+
+                        .icon_img {
+                        }
+
+                        .icon_txt {
+                            color: $color-white;
+                            font-family: $heading-font-family;
+                            font-size: 16px;
+                            letter-spacing: 0.1em;
+                        }
+                    }
+                }
+            }    
+        }
+
+    }
+
+
+    @include media (max-width, 1023px){        
+    
+        .sec-contact {
+            padding: 0;
+            height: 100vh;
+        }
+    }
+
+}
+

@@ -24,33 +24,53 @@
     font-weight: 700;
 }
 
+.icon_blurb {            
+	display: flex;
+	align-items: center;
+	margin-bottom: 15px;
+
+	.icon_img {
+		margin-right: 10px;
+	}
+
+	.icon_txt {
+		font-size: 18px;
+	}
+}
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;       /* Remove default arrow */
 	color: $color-white !important;
-	background:  url(../img/icon/icn-3dots.svg) no-repeat center right 6px/20px 20px !important; 
     padding-right: 30px;
     text-transform: uppercase;
     padding: 15px;
     border-radius: 5px !important;
     border: 1px solid rgba(255,255,255,0.1) !important;
-
+	background:rgba(255,255,255,0.1) !important;
 	position: relative;
 	display: flex;
 
 	&:focus {
-		background:  url(../img/icon/icn-3dots.svg) no-repeat center right 6px/20px 20px !important; 
     	border: 1px solid rgba(255,255,255,0.1) !important;
 		color: $color-black;
 	}
 
 	&::-ms-expand {
 		display: none;
-	  }
-	
+	}
 
+	&:hover {
+		background: $color-primary;
+	}
+	
  }
+
+ option { 
+    /* Whatever color  you want */
+    background-color: #111111;
+	border: 1px solid rgba(255,255,255,0.1) !important;
+}
 
 //Custom foundation 
 @include media(min-width, 1600px) {
@@ -228,109 +248,127 @@ select {
 
 //pagination {
 	
-	.grid-isotope {
+.grid-isotope {
 
-		position: relative;
+	position: relative;
 
-		.pagination  {
-			margin-top: 1rem;
-			display: flex;
-			justify-content: center;
-			flex-direction: row;
-			align-items: center;
-				
-
-			.page-numbers {	
-				
-				&:not(.prev):not(.next):not(.current){
-
-					
-					font-size: 0;
-					width: 4px;
-					height: 4px;
-					border-radius: 50%;
-					padding: 0;
-					background: $color-white;
-					display: flex;
-					align-items: center;
-					justify-content: center; 
-					margin: 0 20px;
-					
-					&:before {						
-						content: '';		
-						width: 20px;
-						height: 20px;
-						border-radius: 50%;
-						border: 0;
-						cursor: pointer;
-						padding: 10px;
-						background: transparent;
-					}						
-						
-					&:hover {		
-							
-						background: $color-primary;
-						&:before {				
-							border: 1px solid $color-white;
-						}				
-
-					}
-
-				}
-				&.current {
-					font-size: 0;
-					width: 4px;
-					height: 4px;
-					border-radius: 50%;
-					padding: 0;
-					background: $color-primary;
-					display: flex;
-					align-items: center;
-					justify-content: center; 
-					margin: 0 10px;
-
-					&:before {						
-						content: '';		
-						width: 20px;
-						height: 20px;
-						border-radius: 50%;
-						border: 1px solid $color-white;
-						cursor: pointer;
-						padding: 10px;
-						background: transparent;
-					}
-				}
-
-				&.prev,
-				&.next {
-					top: 40%;
-					font-size: 0;
-					&:hover {
-						background: transparent;
-					}
-					&:after {
-						display: none;
-					}
-				}
+	.pagination  {
+		margin-top: 1rem;
+		display: flex;
+		justify-content: center;
+		flex-direction: row;
+		align-items: center;
 			
-				&.prev {
-					position: absolute;
-					left: -10%;
-					&:before {
-						content: url(../img/icon/icn-slick-chev-left.svg);
-					}
-				}
 
-				&.next {
-					position: absolute;
-					right: -10%;
-					&:before {
-						content: url(../img/icon/icn-slick-chev-right.svg);
-					}
+		.page-numbers {	
+			
+			&:not(.prev):not(.next):not(.current){
+
+				
+				font-size: 0;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				padding: 0;
+				background: $color-white;
+				display: flex;
+				align-items: center;
+				justify-content: center; 
+				margin: 0 20px;
+				
+				&:before {						
+					content: '';		
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					border: 0;
+					cursor: pointer;
+					padding: 10px;
+					background: transparent;
+				}						
+					
+				&:hover {		
+						
+					background: $color-primary;
+					&:before {				
+						border: 1px solid $color-white;
+					}				
+
 				}
 
 			}
-			
+			&.current {
+				font-size: 0;
+				width: 4px;
+				height: 4px;
+				border-radius: 50%;
+				padding: 0;
+				background: $color-primary;
+				display: flex;
+				align-items: center;
+				justify-content: center; 
+				margin: 0 10px;
+
+				&:before {						
+					content: '';		
+					width: 20px;
+					height: 20px;
+					border-radius: 50%;
+					border: 1px solid $color-white;
+					cursor: pointer;
+					padding: 10px;
+					background: transparent;
+				}
+			}
+
+			&.prev,
+			&.next {
+				top: 40%;
+				font-size: 0;
+				&:hover {
+					background: transparent;
+				}
+				&:after {
+					display: none;
+				}
+			}
 		
+			&.prev {
+				position: absolute;
+				left: -10%;
+				&:before {
+					content: url(../img/icon/icn-slick-chev-left.svg);
+				}
+			}
+
+			&.next {
+				position: absolute;
+				right: -10%;
+				&:before {
+					content: url(../img/icon/icn-slick-chev-right.svg);
+				}
+			}
+
 		}
+		
+	
 	}
+	@include media(max-width, 1023px){
+		
+		max-height: 1150px;
+		overflow: hidden;
+
+		.btn_read_more  {
+			display: block;
+			position: absolute; 
+			bottom: 0; 
+			left: 0;
+			width: 100%; 
+			text-align: center; 
+			margin: 0; padding: 30px 0; 
+			/* "transparent" only works here because == rgba(0,0,0,0) */
+			background: #080800;
+		}
+
+	}
+}

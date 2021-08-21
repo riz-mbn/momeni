@@ -3,7 +3,7 @@
 define('MBN_DIR_URI', get_template_directory_uri());
 define('MBN_DIR_PATH', get_template_directory());
 define('MBN_ASSETS_URI', MBN_DIR_URI.'/resources');
-define('MBN_MAP_API_KEY',"AIzaSyDac2mOtJr_IktjUhiLZYRL_xHzxRbodRE");
+define('MBN_MAP_API_KEY',"AIzaSyCdKe1vw-cidSaFEvaEcuesAI7sLkfda-4");
 
 /**
  * Theme setup
@@ -96,6 +96,8 @@ function mbn_enqueue_scripts(){
     //wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.css', [], $wp_version);
     //wp_enqueue_script('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.js', [], $wp_version);
 
+    wp_register_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?&key='. MBN_MAP_API_KEY.'&callback=initMap', array(), '', true);
+
     // Fonts
     wp_enqueue_style('custom-fonts', 'https://use.typekit.net/zrx8khr.css', [], $wp_version);
     
@@ -157,6 +159,11 @@ require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
 
+
+add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
+function form_submit_button( $button, $form ) {
+    return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'>{$form['button']['text']}</button>";
+}
 
 /**
  * Register font hook.
@@ -222,6 +229,12 @@ function mbn_page_type() {
 	}
 	if ( strpos( $template, 'portfolio.php' ) ) {
 		return 'portfolio';
+	}
+	if ( strpos( $template, 'contact.php' ) ) {
+		return 'contact';
+	}
+	if ( strpos( $template, 'single-projects_type.php' ) ) {
+		return 'single-portfolio';
 	}
 	if ( is_single() ) {
 		return 'single';

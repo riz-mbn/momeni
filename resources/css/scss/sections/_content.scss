@@ -3,6 +3,7 @@ body {
         background: url(../img/bgs/grid.png) repeat center , #111;
         background-size: cover;
     }
+
 }
 
 #wrapper {
@@ -260,7 +261,6 @@ p {
     left: 50%;
     margin: auto;
     transform: translate(-50%, -50%);
-    z-index: 1;
     -webkit-backface-visibility: hidden;
     opacity: 0;
     width: 100%;
@@ -420,8 +420,13 @@ section {
         &.admin-bar {
 
             header .hsnav-s4{
-                &.sticky {
-                    top: 46px;
+                &.is-anchored {
+                    top: 46px !important; 
+                    position: fixed;
+                }
+
+                &.is-stuck {
+                    top: 0 !important; 
                 }
             }
 
