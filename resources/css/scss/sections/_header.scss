@@ -447,6 +447,11 @@ header {
 
 			}
 
+				
+			&.sticky {
+				position: fixed;
+			}
+
 		}
 
 
@@ -741,11 +746,11 @@ header {
 			position: unset;
 
 			h1.hollow_text {
-				font-size: 14vw;
+				font-size: 13vw;
 			}
 
 			h1.subtitle {
-				font-size: 12vw;
+				font-size: 11vw;
 			}
 
 			.post_group_wrap{ 
