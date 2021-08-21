@@ -24,7 +24,33 @@
     font-weight: 700;
 }
 
+select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;       /* Remove default arrow */
+	color: $color-white !important;
+	background:  url(../img/icon/icn-3dots.svg) no-repeat center right 6px/20px 20px !important; 
+    padding-right: 30px;
+    text-transform: uppercase;
+    padding: 15px;
+    border-radius: 5px !important;
+    border: 1px solid rgba(255,255,255,0.1) !important;
 
+	position: relative;
+	display: flex;
+
+	&:focus {
+		background:  url(../img/icon/icn-3dots.svg) no-repeat center right 6px/20px 20px !important; 
+    	border: 1px solid rgba(255,255,255,0.1) !important;
+		color: $color-black;
+	}
+
+	&::-ms-expand {
+		display: none;
+	  }
+	
+
+ }
 
 //Custom foundation 
 @include media(min-width, 1600px) {

@@ -32,7 +32,7 @@
 				<button class="button filter-button show-for-large" data-filter="<?php echo esc_attr( '.'.$term->slug ); ?>"><?php echo esc_html( $term->name ); ?></button>
 			<?php endforeach; endif;?>
 		</div>
-					
+	
 		<select class="filter-select hide-for-large">					
 			<option class="" value="*">All Projects</option>
 			<?php
