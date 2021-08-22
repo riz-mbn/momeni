@@ -11,6 +11,46 @@
     }
     
 }
+#the-map {
+    
+    .map_content_inner {
+        width: 320px;
+        height: 238px;
+        padding: 0;
+    
+        .map_location {            
+            letter-spacing: 0.1em;
+            height: 87px;
+            color: #777;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .icon_blurb {
+                align-items: flex-start;
+
+                .icon_txt {
+                    font-size: 14px;
+                }
+
+            }
+        }
+        .map_img {
+            text-align: center;
+            width: 100%;
+            height: 150px;
+            padding: 20px 0;
+            background: linear-gradient( 90deg, #0F4D4D 0%, #0C3E3E 48%, #0A3333 100%);
+        }
+    }     
+    .gm-style-iw {
+        max-width: 320px !important;
+        padding: 0px !important;
+    }
+    .gm-style-iw-d {
+        overflow: auto !important;
+    }
+}
 
 .contact {
     min-height: 120vh;
@@ -28,11 +68,15 @@
         .map_bg{
             width: 100%;
             height: 100%;
-            position: relative;
+            position: unset !important;
             top: 0;
             right: 0;
             -webkit-mask-image: -webkit-gradient(linear, left 30%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
             z-index: -1;
+        }
+
+        .map_content{   
+                        
         }
     
         .map_caption {
@@ -101,11 +145,52 @@
     }
 
 
-    @include media (max-width, 1023px){        
+    @include media (max-width, 1024px){        
     
         .sec-contact {
             padding: 0;
             height: 100vh;
+        }
+    }
+
+    @include media (max-width, 1023px){        
+    
+
+        &.content {
+            padding: 0;
+        }
+        .sec-contact {
+            padding: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 0;
+
+            .map_bg {
+                order:2;
+                position: relative !important;
+                height: 520px;
+                z-index: 999;
+                -webkit-mask-image: none;
+            }
+            .map_caption {
+                order: 1;
+                position: unset;
+                .grid-container {
+                    padding: 0 !important;
+                }
+
+                .col-blurb {
+                    background: #000;
+                    .col-img {
+                        display: none;
+                    }
+                }
+
+                .ginput_container_address .ginput_address_city, .ginput_container_address .ginput_address_state, .ginput_container_address .ginput_address_zip {
+                    width: 48%;
+                }
+            }
         }
     }
 

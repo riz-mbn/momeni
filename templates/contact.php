@@ -1,11 +1,23 @@
 <?php 
     /* Template Name: Contact template */
     get_header();
-
+if(wp_is_mobile()){
+	$lat = 336.132674;
+	$lang = -115.278277;
+}
+else {
+	$lat = 36.142656;
+	$lang= -115.291667;
+}
 ?>
 <section class="sec-contact page-content">
-	<div class="map_bg">
-		<iframe src="https://snazzymaps.com/embed/333411" width="100%" height="100%" style="border:none;"></iframe>
+	<div id="the-map" class="map_bg" data-marker="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.svg">
+		<div class="map_content" 
+			data-logo="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" 
+			data-address="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map-2.svg"
+			data-lang="<?php echo $lang; ?>"
+			data-lat="<?php echo $lat; ?>" >
+		</div>
 	</div>
 	<div class="map_caption">
 		<div class="grid-container">		
@@ -19,7 +31,7 @@
 				</div>
 				<div class="cell large-7">
 					<div class="col-blurb">
-						<figure><img src="<?php echo MBN_ASSETS_URI ?>/img/contact-img.jpg" alt="" width="380" height="300"/></figure>
+						<figure class="col-img"><img src="<?php echo MBN_ASSETS_URI ?>/img/contact-img.jpg" alt="" width="380" height="300"/></figure>
 						<div class="text-wrap">							
 							<div class="icon_blurb">						
 								<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-marker.svg" alt="" width="21" height="21" /></figure></span>

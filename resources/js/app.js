@@ -4,6 +4,7 @@
         onReady: function(){
             app.customDropdown();
             app.navbarActive();
+            
         },	
         onLoad: function(){
             $(document).foundation();
@@ -182,13 +183,55 @@
                 var href = $(this).attr('href') + '/';
                 return  href === location.href.replace(/#.*/, "");
             }).closest('.menu-item').addClass('current-menu-item').closest('.menu-item').siblings().removeClass('current-menu-item');
-        }
+        },
+
+    
+        makeMap: function() {
+                    
+            var map_id          = document.getElementById('the-map');
+            var custom_marker   = $('#the-map').data('marker');
+            var snazzyMap       = JSON.parse(wpGlobals.mapOptions);
+            var logo_content    = $('.map_content').data('logo');
+            var address_pin     = $('.map_content').data('address');
+            var lat             = $('.map_content').data('lat');
+            var lang             = $('.map_content').data('lang');
+
+            var contentString   = 
+            '<div class="map_content_inner">'+ 
+                '<div class="map_img"><figure><img src="'+logo_content+'" alt="" width="210" height="140"></figure></div>'+
+                '<div class="map_location">' +			
+                    '<div class="icon_blurb">' +						
+                        '<span class="icon_img"><figure><img src="'+address_pin+'" alt="" width="21" height="21" /></figure></span>' +
+                        '<span class="icon_txt">3110 S. Durango Dr., Suite 205<br/> Las Vegas, Nevada 89117</span>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
         
-        
+            var map = new google.maps.Map(map_id, {
+                center : new google.maps.LatLng(lat,lang),
+                zoom : 13,
+                mapTypeId : google.maps.MapTypeId.ROADMAP,
+                disableDefaultUI: true,
+                styles : snazzyMap
+            });
+
+                        
+            var infowindow = new google.maps.InfoWindow({
+                content: contentString,
+            });
+            
+            var marker = new google.maps.Marker({
+                position : new google.maps.LatLng(36.132674, -115.278277),
+                icon: custom_marker,
+                map: map
+            });
+            // marker.setMap(map);
+            infowindow.open(map, marker);
+        }        
     }
 
-
     document.addEventListener('DOMContentLoaded', app.onReady);
-    window.addEventListener('load', app.onLoad);
+    window.addEventListener('load', app.onLoad);    
+    google.maps.event.addDomListener(window, 'load', app.makeMap);
 
 })(jQuery);

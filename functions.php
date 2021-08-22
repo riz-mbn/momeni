@@ -96,7 +96,24 @@ function mbn_enqueue_scripts(){
     //wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.css', [], $wp_version);
     //wp_enqueue_script('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.js', [], $wp_version);
 
-    wp_register_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?&key='. MBN_MAP_API_KEY.'&callback=initMap', array(), '', true);
+    //wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?&key='. MBN_MAP_API_KEY.'&callback=initMap', array(), '', true);
+
+        
+    // google maps
+    wp_enqueue_script(
+        'google-maps',
+        'https://maps.googleapis.com/maps/api/js?' . http_build_query( array(
+            'key'         => MBN_MAP_API_KEY,
+            'v'         => '3',
+            'libraries' => 'places',
+            'language'  => substr( get_locale(), 0, 2 ),
+        ) ),
+        array(),
+        '3',
+        false
+    );
+
+
 
     // Fonts
     wp_enqueue_style('custom-fonts', 'https://use.typekit.net/zrx8khr.css', [], $wp_version);
@@ -104,6 +121,10 @@ function mbn_enqueue_scripts(){
     // App
     wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
     wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version, true);
+
+    wp_localize_script('app', 'wpGlobals', array(
+        'mapOptions' => file_get_contents( MBN_ASSETS_URI.'/js/map_style.json')
+      ) );
     
 
     // localize objects
@@ -162,7 +183,7 @@ require MBN_DIR_PATH.'/includes/admin-hooks.php';
 
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
-    return "<button class='button gform_button' id='gform_submit_button_{$form['id']}'>{$form['button']['text']}</button>";
+    return "<button class='button hollow primary gform_button' id='gform_submit_button_{$form['id']}'>{$form['button']['text']}</button>";
 }
 
 /**

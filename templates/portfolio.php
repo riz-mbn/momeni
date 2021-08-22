@@ -3,7 +3,7 @@
     get_header();
 	$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 
-	if(wp_is_mobile() ){
+	if(wp_is_mobile()){
 
 		$projects_args = array(  
 			'post_type' => 'projects_type',
