@@ -86,9 +86,9 @@
 
 <section class="sec_cta show-for-large">	
 	<div class="grid-x grid-margin-x cols2-s4 col-cta">
-		<div class="cell xlarge-7 large-5 align-self-middle col-copy">
+		<div class="cell xlarge-7 large-4 align-self-middle col-copy">
 		</div>
-		<div class="cell xlarge-5 large-7 align-self-middle large-order-2 col-cta">
+		<div class="cell xlarge-5 large-8 align-self-middle large-order-2 col-cta">
 			<div class="buttons cta-group">
 				<a href="<?php echo home_url().'/company' ?>" class="button primary hollow">Who We Are</a>
 				<a href="<?php echo home_url().'/services' ?>" class="button primary hollow">What We Do</a>

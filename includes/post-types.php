@@ -66,14 +66,31 @@ function projects_post() {
         array(
             'hierarchical' => true,         
             'has_archive' => true,
-            'label' => 'Categories',            
+            'label' => 'Project Categories',            
             'query_var' => true,
             'show_admin_column' => true,
             'show_in_rest' => true,
-            'rewrite' => array(
-                'slug' => 'projects_cat',
-                'with_front' => true  
-            )
+            // 'rewrite' => array(
+            //     'slug' => 'projects_cat',
+            //     'with_front' => true  
+            // )
+        )
+    );
+
+    register_taxonomy(  
+        'projects_work_cat',
+        'projects_type',
+        array(
+            'hierarchical' => true,         
+            'has_archive' => true,
+            'label' => 'Work Categories',            
+            'query_var' => true,
+            'show_admin_column' => true,
+            'show_in_rest' => true,
+            // 'rewrite' => array(
+            //     'slug' => 'projects_work_cat',
+            //     'with_front' => true  
+            // )
         )
     );
 }

@@ -67,7 +67,6 @@
 			?>
 			<div class="grid">
 				<?php 
-
 				while ( $projects->have_posts() ) : $projects->the_post();
 					$title = get_the_title();
 					$ID = get_the_ID();
@@ -98,8 +97,8 @@
 								<div class="project_thumb">                                                     
 									<div class="project_hover">
 										<div class="project_inner">
-											<p class="title"><?php echo esc_html($title) ?></h4>
-											<p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
+											<p class="title"><?php echo esc_html($title) ?></p>
+											<p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></p>
 										</div>
 									</div>
 									<figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" /></figure>

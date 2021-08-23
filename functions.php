@@ -93,13 +93,21 @@ function mbn_enqueue_scripts(){
     // wp_enqueue_script('nicescroll', MBN_ASSETS_URI.'/vendor/jquery.nicescroll.min.js', [], $wp_version);
 
     // Fancybox
-    //wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.css', [], $wp_version);
-    //wp_enqueue_script('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.js', [], $wp_version);
+    wp_enqueue_style('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.css', [], $wp_version);
+    wp_enqueue_script('fancybox', MBN_ASSETS_URI.'/vendor/fancybox/jquery.fancybox.min.js', [], $wp_version);
 
-    //wp_register_script('google-maps', 'https://maps.googleapis.com/maps/api/js?&key='. MBN_MAP_API_KEY.'&callback=initMap', array(), '', true);
+    // Fonts
+    wp_enqueue_style('custom-fonts', 'https://use.typekit.net/zrx8khr.css', [], $wp_version);
+    
+    // App
+    wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
+    wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version, true);
+    
+    //map
+    //wp_enqueue_script('google-maps', 'https://maps.googleapis.com/maps/api/js?&key='. MBN_MAP_API_KEY.'&callback=initMap&libraries=&v=weekly', array(), '', false);
 
         
-    // google maps
+    //google maps
     wp_enqueue_script(
         'google-maps',
         'https://maps.googleapis.com/maps/api/js?' . http_build_query( array(
@@ -112,15 +120,6 @@ function mbn_enqueue_scripts(){
         '3',
         false
     );
-
-
-
-    // Fonts
-    wp_enqueue_style('custom-fonts', 'https://use.typekit.net/zrx8khr.css', [], $wp_version);
-    
-    // App
-    wp_enqueue_style('app', MBN_ASSETS_URI.'/css/app.css', [], $wp_version);
-    wp_enqueue_script('app', MBN_ASSETS_URI.'/js/app.js', [], $wp_version, true);
 
     wp_localize_script('app', 'wpGlobals', array(
         'mapOptions' => file_get_contents( MBN_ASSETS_URI.'/js/map_style.json')
@@ -179,7 +178,6 @@ require MBN_DIR_PATH.'/includes/post-types.php';
 require MBN_DIR_PATH.'/includes/shortcodes.php';
 require MBN_DIR_PATH.'/includes/public-hooks.php';
 require MBN_DIR_PATH.'/includes/admin-hooks.php';
-
 
 add_filter( 'gform_submit_button', 'form_submit_button', 10, 2 );
 function form_submit_button( $button, $form ) {
@@ -270,3 +268,61 @@ function mbn_page_type() {
 		return 'blog';
 	}
 }
+
+
+function momeni_map(){	
+    //echo '<script src="https://maps.googleapis.com/maps/api/js?key='. MBN_MAP_API_KEY .'&callback=initMap&libraries=&v=weekly" type="text/javascript" async="false" ></script>';	
+?>
+<script>
+
+		function initMap() {
+							
+			var map_id          = document.getElementById('the-map');
+			var custom_marker   = $('#the-map').data('marker');
+			var snazzyMap       = JSON.parse(wpGlobals.mapOptions);
+			var logo_content    = $('.map_content').data('logo');
+			var address_pin     = $('.map_content').data('address');
+			var lat             = $('.map_content').data('lat');
+			var lang             = $('.map_content').data('lang');
+
+			var contentString   = 
+			'<div class="map_content_inner">'+ 
+				'<div class="map_img"><figure><img src="'+logo_content+'" alt="" width="210" height="140"></figure></div>'+
+				'<div class="map_location">' +			
+					'<div class="icon_blurb">' +						
+						'<span class="icon_img"><figure><img src="'+address_pin+'" alt="" width="21" height="21" /></figure></span>' +
+						'<span class="icon_txt">3110 S. Durango Dr., Suite 205<br/> Las Vegas, Nevada 89117</span>' +
+					'</div>' +
+				'</div>' +
+			'</div>';
+
+			var map = new google.maps.Map(map_id, {
+				center : new google.maps.LatLng(lat,lang),
+				zoom : 13,
+				mapTypeId : google.maps.MapTypeId.ROADMAP,
+				disableDefaultUI: true,
+				styles : snazzyMap
+			});
+
+						
+			var infowindow = new google.maps.InfoWindow({
+				content: contentString,
+			});
+			
+			var marker = new google.maps.Marker({
+				position : new google.maps.LatLng(36.132674, -115.278277),
+				icon: custom_marker,
+				map: map
+			});
+			// marker.setMap(map);
+			infowindow.open(map, marker);
+		}   
+
+		
+		google.maps.event.addDomListener(window, 'load', initMap);
+
+</script>
+
+<?php
+}
+add_action('wp_head', 'momeni_map');

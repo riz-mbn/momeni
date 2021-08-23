@@ -44,6 +44,7 @@ $projects = new WP_Query( $projects_args );
                                     $img = wp_get_attachment_image_src( get_post_thumbnail_id( $projects->ID ), 'full' ); 
                                     $url = get_the_permalink();
 
+                                    $project_subtitle = get_field('project_subtitle');
                                     $project_state = get_field('project_state');
                                     $project_city = get_field('project_city');
 
@@ -54,7 +55,7 @@ $projects = new WP_Query( $projects_args );
                                                     <div class="project_thumb">                                                             
                                                         <div class="project_hover">
                                                             <div class="project_inner">
-                                                                <p class="title"><?php echo esc_html($title) ?></h4>
+                                                                <p class="title"><?php echo esc_html($title); ?><br/><?php echo esc_html($project_subtitle); ?></h4>
                                                                 <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
                                                             </div>
                                                         </div>
@@ -113,6 +114,7 @@ $projects = new WP_Query( $projects_args );
             $img = wp_get_attachment_image_src( get_post_thumbnail_id( $projects->ID ), 'full' ); 
             $url = get_the_permalink();
 
+            $project_subtitle = get_field('project_subtitle');
             $project_state = get_field('project_state');
             $project_city = get_field('project_city');
 
@@ -123,7 +125,7 @@ $projects = new WP_Query( $projects_args );
                             <figure><img src="<?php echo ( isset($img[0]) ) ? esc_url($img[0]) : esc_url(MBN_ASSETS_URI . '/img/project-place-holder.jpg'); ?>" /></figure>
                         </div>
                         <div class="project_info">
-                            <h4><?php echo esc_html($title) ?></h4>
+                            <h4><?php echo esc_html($title) ?><br/><?php echo esc_html($project_subtitle); ?></h4>
                             <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></h4>
                         </div>
                         <a href="<?php echo esc_url($url);?>" class="button gradient"><?php echo esc_html('View More Projects');?></a>

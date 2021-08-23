@@ -24,6 +24,68 @@
     font-weight: 700;
 }
 
+.address {
+	
+	display: flex;
+	align-items: center;    
+
+   &:before {
+		height: 18px;
+		content: url(../img/icon/icn-marker.svg);
+
+   }
+}
+
+.float {
+	position: absolute;
+}
+
+.back_btn_wrap {
+	margin-bottom: 10px;
+}
+    
+.back_btn {
+	color: $color-white;
+	position: relative;
+
+	&:hover {
+		color: $color-primary;
+	}
+
+	span {
+		
+		margin-left: 20px;
+	}
+
+	&:before{
+		content: url(../img/icon/icn-back-chev.svg);
+		position: absolute;
+		left: 0;
+	}
+}
+
+.info {
+	color: $color-white;
+	font-family: $heading-font-family;
+	font-size: 14px;
+	font-weight: 400;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	position: relative;
+    display: flex;
+    align-items: center;
+
+	span {
+		margin-left: 30px;
+	}
+
+	&:before {
+		content: url(../img/icon/icn-info.svg);
+		position: absolute;
+		left: 0;
+	}
+}
+
 .icon_blurb {            
 	display: flex;
 	align-items: center;

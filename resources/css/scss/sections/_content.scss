@@ -1,5 +1,6 @@
 body {
-    &:not(.home){
+    &:not(.home),
+    &:not(.single){
         background: url(../img/bgs/grid.png) repeat center , #111;
         background-size: cover;
     }
@@ -35,7 +36,7 @@ header {
 
 .content {
     min-height: 70vh;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
 
     @include media (max-width, 1023px){
         padding: 40px 0 100px;
@@ -159,7 +160,7 @@ p {
         flex-direction: column;
         .button {
             position:relative;
-            margin: 1px 1px 0 1px !important;
+            margin: 1px 1px 15px 1px !important;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -235,14 +236,6 @@ p {
                    &.address{
                        color: #aaaaaa;
                        font-size: 14px;
-                        display: flex;
-                        align-items: center;    
-
-                       &:before {
-                            height: 18px;
-                            content: url(../img/icon/icn-marker.svg);
-
-                       }
                    }
                 }
             }
@@ -250,9 +243,27 @@ p {
 
     }
 }
+.project_grid {
+    display: flex;
+    flex-wrap: wrap
+}
+
+.project_item {
+    width: 25%;
+}
+
 
 .project_thumb{
     position:relative;
+    figure {
+        height: 172px;
+        
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
 .project_hover{
@@ -290,6 +301,68 @@ section {
     }
     &.button_section {
         padding-top: 0;
+    }
+}
+
+
+.sec_cta {
+    padding: 0;
+    background: #111;
+
+    .cols2-s4 {
+        padding-bottom: 0;
+    }
+
+    .col-cta {
+        display: flex;
+    }
+    .cta-group {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .button {
+            margin-left: 5px;
+            margin-right: 5px;
+            min-width: 180px;
+            margin-bottom: 0 !important;
+        }
+    }
+    .text-group {
+        flex-direction: column;
+        display: flex;
+        width: 100%;
+        position: relative;
+        margin-left: -5px;
+
+        &:before {
+            content: '';
+            height: 2px;
+            background: -webkit-gradient(linear, left bottom, left top, from(#00A84F), to(#00A84F)), -webkit-gradient(linear, left top, right top, from(#00A84F), to(#00A84F));
+            background: linear-gradient(0deg, #00A84F, #00A84F), linear-gradient(90deg, #00A84F 0%, #00A84F 100%);
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            right: 0;
+        }
+
+        a {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            color: #fff;
+            font-family: "neue-haas-grotesk-display", sans-serif;
+            font-weight: normal;
+            font-size: 16px;
+            letter-spacing: 1px;
+            margin: 15px 0 15px 15px;
+
+            span {
+                margin-right: 10px;
+            }
+        }
     }
 }
 
