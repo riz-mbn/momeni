@@ -24,22 +24,22 @@
 	$work_cat    		= get_field('');
 
 
-    $projects_cat = wp_get_post_terms( $ID, 'projects_cat' );
-    $works_cat = wp_get_post_terms( $ID, 'projects_work_cat' );
+    $projects_cat       = wp_get_post_terms( $ID, 'projects_cat' );
+    $works_cat          = wp_get_post_terms( $ID, 'projects_work_cat' );
 ?>
 <span class="float_line vertical"></span>
 <section class="single_port">
     <div class="col-header">
         <div class="grid-container">		
             <div class="grid-x grid-margin-x">
-                <div class="cell large-5">
+                <div class="cell large-4">
                     <div class="back_btn_wrap">
                         <a class="back_btn" href="<?php echo home_url().'/portfolio' ?>"><span class="small">Portfolio</span></a>
                     </div>
                     <h3><span class="highlight"><?php echo $project_title; ?></span></h3>
                     <h3><?php echo $project_subtitle; ?></h3>
                 </div>	
-                <div class="cell large-7 align-self-bottom hide-for-large">				
+                <div class="cell large-7 large-offset-1 align-self-bottom show-for-large">				
                     <a class="info" class="#information"><span>View Information</span></a>
                 </div>		
             </div>			
@@ -48,7 +48,7 @@
     <div class="col-featimg">
         <div class="grid-x grid-margin-x">
             <div class="cell xlarge-12">
-                <figure><img src="<?php echo esc_url($img_url) ?>" /></figure>
+                <figure class="featured_img"><img src="<?php echo esc_url($img_url) ?>" /></figure>
             </div>		
         </div>
     </div>	
@@ -60,26 +60,26 @@
                     <div class="text-wrap">
                         <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></p>
                     </div>
-                    <div class="text-wrap">
-                        <p class="category_title hide-for-large">Work Category</p>
-                        <p><?php
-                            if ( $works_cat || !is_wp_error( $works_cat ) ):
+                    <?php if ( $works_cat || !is_wp_error( $works_cat ) ): ?>
+                        <div class="text-wrap show-for-large">
+                            <p class="category_title show-for-large">Work Category</p>
+                            <p><?php                                
                                 foreach ( $works_cat as $work_cat ):
                                     echo '<span>' . esc_attr( $work_cat->name . ', ' ) . ' </span>';
                                 endforeach;
-                            endif;
-                        ?> </p>          
-                    </div>
-                    <div class="text-wrap">
-                        <p class="category_title">Project Category</p>     
-                        <p class="button"><?php
-                            if ( $projects_cat || !is_wp_error( $projects_cat ) ):
-                                foreach ( $projects_cat as $project_cat ):
-                                    echo '<span>' . esc_attr( $project_cat->name . ' ' ) . '</span>';
-                                endforeach;
-                            endif;
-                        ?>  </p>    
-                    </div>
+                            ?> </p>  
+                        </div>
+                    <?php endif; ?>        
+                    <?php if ( $projects_cat || !is_wp_error( $projects_cat ) ): ?>
+                        <div class="text-wrap">
+                            <p class="category_title">Project Category</p>     
+                            <p class="button"><?php
+                                    foreach ( $projects_cat as $project_cat ):
+                                        echo '<span>' . esc_attr( $project_cat->name . ' ' ) . '</span>';
+                                    endforeach;
+                            ?> </p>    
+                        </div>
+                    <?php endif; ?>    
                 </div>		
                 <div class="cell large-7 align-self-middle col-copy show-for-large">
                     <h3><?php echo $project_excerpt ?></h3>
