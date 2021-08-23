@@ -62,7 +62,7 @@
                     </div>
                     <?php if ( $works_cat || !is_wp_error( $works_cat ) ): ?>
                         <div class="text-wrap show-for-large">
-                            <p class="category_title show-for-large">Work Category</p>
+                            <p class="category_title">Work Category</p>
                             <p><?php                                
                                 foreach ( $works_cat as $work_cat ):
                                     echo '<span>' . esc_attr( $work_cat->name . ', ' ) . ' </span>';
