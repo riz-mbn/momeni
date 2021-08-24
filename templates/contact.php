@@ -11,14 +11,28 @@ else {
 }
 ?>
 <section class="sec-contact page-content">
-	<div id="the-map" class="map_bg" data-marker="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.svg">
+	<!-- <div id="the-map" class="map_bg" data-marker="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.svg">
 		<div class="map_content" 
 			data-logo="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" 
 			data-address="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map-2.svg"
 			data-lang="<?php echo $lang; ?>"
 			data-lat="<?php echo $lat; ?>" >
 		</div>
+	</div> -->
+	<div class="map_bg"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_map.jpg" width="1920px" height="1176px"></figure>
+		<div class="map_content">
+			<div class="map_content_inner">
+				<div class="map_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" alt="" width="210" height="140"></figure></div>
+				<div class="map_location">		
+					<div class="icon_blurb">						
+						<span class="icon_img"><figure><img src="'+address_pin+'" alt="" width="21" height="21" /></figure></span>
+						<span class="icon_txt">3110 S. Durango Dr., Suite 205<br/> Las Vegas, Nevada 89117</span>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
+	
 	<div class="map_caption">
 		<div class="grid-container">		
 			<div class="grid-x">
