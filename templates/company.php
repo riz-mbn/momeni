@@ -8,13 +8,23 @@
 		<div class="grid-x grid-margin-x cols2-s4">
             <div class="cell xlarge-4 large-6 medium-12 align-self-middle col-copy ">
 				<p class="small">Our Company</p>
-                <h2><span class="highlight">Momeni Construction</span> is a full-service <span class="strong"><em>commercial construction</em></span> and <span class="strong"><em>construction management</em></span> firm based in Las Vegas, Nevada, since 2000.</h2>
-                <p class="show-for-large">We operate in <span class="strong">Nevada, California, Arizona,</span> and <span class="strong">Utah</strong>, and have <span class="strong">completed numerous projects of varying sizes totaling hundreds of millions of dollars.</span></p>
+                <h2>
+					<span class="highlight">Momeni Construction</span> is a full-service 
+				<span class="strong"><em>commercial construction</em></span> and 
+				<span class="strong"><em>construction management</em></span> firm based in Las Vegas, Nevada, since 2000.</h2>
+                <p class="show-for-large">We operate in 
+					<span class="strong">Nevada, California, Arizona,</span> and 
+					<span class="strong">Utah</span>, and have 
+					<span class="strong">
+						completed numerous projects of varying sizes totaling hundreds of millions of dollars.</span></p>
 				<a href="<?php echo home_url().'/portfolio' ?>" class="button primary hollow show-for-large">View Our Work</a>
             </div>	
             <div class="cell xlarge-8 large-6 medium-12">
                 <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/map-bldg.png" alt="" width="1108" height="886"></figure>
-                <p class="hide-for-large">We operate in <span class="strong">Nevada, California, Arizona,</span> and <span class="strong">Utah</strong>, and have <span class="strong">completed numerous projects of varying sizes totaling hundreds of millions of dollars.</span></p>
+                <p class="hide-for-large">We operate in 
+					<span class="strong">Nevada, California, Arizona,</span> and 
+					<span class="strong">Utah</span>, and have 
+					<span class="strong">completed numerous projects of varying sizes totaling hundreds of millions of dollars.</span></p>
             </div>		
         </div>
 	</div>	
@@ -38,7 +48,7 @@
 				<div class=" col-copy">
 					<div class="text-group">
 						<p class="">We are experienced in all phases and facets of construction, and work with our design affiliate, <span class="strong">Momeni Engineers, LLC</span> , to offer our clients design-build, value engineering, and sustainable design services as needed.</p>
-						<h2><span class="highlight"><em>Momeni Construction</em></span> <span class="strong"><em>combines the expertise, experience, and capabilities of large contractors with the customer service, agility, and focus of a small business.</em></span></h2>
+						<h2><span class="highlight"><em>Momeni Construction</em></span> <em>combines the expertise, experience, and capabilities of large contractors with the customer service, agility, and focus of a small business.</em></h2>
 					</div>
 				</div>
 			</div>
@@ -90,8 +100,8 @@
 		</div>
 		<div class="cell xlarge-5 large-8 align-self-middle large-order-2 col-cta">
 			<div class="buttons cta-group">
-				<a href="<?php echo home_url().'/company' ?>" class="button primary hollow">Who We Are</a>
-				<a href="<?php echo home_url().'/services' ?>" class="button primary hollow">What We Do</a>
+				<a href="<?php echo home_url().'/contact' ?>" class="button primary hollow">Connect With Us</a>
+				<a href="<?php echo home_url().'/services' ?>" class="button primary hollow">Know Our Services</a>
 			</div>
 			<div class="text-group">
 				<a href="tel:702248800">
