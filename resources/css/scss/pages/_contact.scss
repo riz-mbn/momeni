@@ -13,24 +13,47 @@
 }
 .map_bg {
 
+    figure.map {
+        height:100%;
+
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
     .map_content {
         position: absolute;
         box-sizing: border-box;
         overflow: hidden;
-        top: 50%;
-        left: 60%;
+        top: 47%;
+        left: 54%;
         transform: translate(-50%,-100%);
+        max-width: 320px !important;
+        padding: 0px !important;
+        border-radius: 8px;
+
+        &:before {
+            content: url('../img/icon/icn-map-caret.png');
+            position: absolute;
+            bottom: 50px;
+            text-align: center;
+            left: 45%;
+        }
+    }
+
+    .map_pin {
+        text-align: center;
+    }
+
+    .map_content_inner {
+        box-shadow: 0 2px 7px 1px rgba(105, 81, 81, 0.3);
         background-color: white;
         border-radius: 8px;
-        box-shadow: 0 2px 7px 1px rgba(105, 81, 81, 0.3);
-        max-width: 320px !important;max-width: 320px !important;
-        padding: 0px !important;
-    }
-    
-    .map_content_inner {
         width: 320px;
         height: 238px;
         padding: 0;
+        margin-bottom: 20px;
     
         .map_location {            
             letter-spacing: 0.1em;
@@ -63,6 +86,13 @@
     }
     .gm-style-iw-d {
         overflow: auto !important;
+    }
+
+    @include media (max-width, 1023px){
+        .map_content_inner { 
+            left: 50%;
+            top: 70%;
+        }
     }
 }
 

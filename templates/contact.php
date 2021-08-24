@@ -19,7 +19,8 @@ else {
 			data-lat="<?php echo $lat; ?>" >
 		</div>
 	</div> -->
-	<div class="map_bg"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_map.jpg" width="1920px" height="1176px"></figure>
+	<div class="map_bg">
+		<figure class="map"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_map.jpg" width="1920px" height="1176px"></figure>
 		<div class="map_content">
 			<div class="map_content_inner">
 				<div class="map_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" alt="" width="210" height="140"></figure></div>
@@ -30,6 +31,7 @@ else {
 					</div>
 				</div>
 			</div>
+			<figure class="map_pin"><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.png" width="40" height="59"></figure>
 		</div>
 	</div>
 	
