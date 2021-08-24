@@ -495,7 +495,6 @@ section {
             header .hsnav-s4{
                 &.is-anchored {
                     top: 46px !important; 
-                    position: fixed;
                 }
 
                 &.is-stuck {
@@ -504,6 +503,7 @@ section {
             }
 
         }
+        
     }
     
     .grid-container {

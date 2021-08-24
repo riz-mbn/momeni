@@ -423,6 +423,10 @@ header {
     						content: ""; border:0;
     					}
     				}
+
+					.contact_info {
+						margin: 160px 20px 0;
+					}
 					
 					@at-root header.show-menu .hsnav-s4 .mobmenu {
 						display: block;
@@ -436,6 +440,10 @@ header {
 		@include media(max-width, 1023px) {
 			background: $color-white;
 			height: 60px;
+
+			&.is-anchored {
+				position: fixed;
+			}
 
 			&:after {
 				display: none
