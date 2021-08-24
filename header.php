@@ -55,6 +55,18 @@
                             <li><a href="<?php echo home_url().'/portfolio' ?>">Portfolio</a></li>
                             <li><a href="<?php echo home_url().'/contact' ?>">Contact</a></li>
                         </ul>
+                        <div class="contact_info text-center">   
+                            <div class="text-group">
+                                <a href="tel:702248800">
+                                    <span><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure></span>
+                                    <span>(702) 248-8004</span>
+                                </a>
+                                <a href="mailto:info@momeniconstruction.com">
+                                    <span><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-envelope.svg" alt="" width="24" height="24"/></figure></span>
+                                    <span>info@momeniconstruction.com</span>
+                                </a>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </div>
