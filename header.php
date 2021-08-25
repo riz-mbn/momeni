@@ -29,13 +29,15 @@
                     </div>
                     <div class="navright">
                         <nav class="navmenu show-for-large">
-                            <ul class="menu align-right dropdown" data-dropdown-menu>
-                                <li class="menu-item"><a href="<?php echo home_url() ?>">Home</a></li>
-                                <li class="menu-item" ><a href="<?php echo home_url().'/company' ?>">Company</a></li>
-                                <li class="menu-item" ><a href="<?php echo home_url().'/services' ?>">Services</a></li>
-                                <li class="menu-item" ><a href="<?php echo home_url().'/portfolio' ?>">Portfolio</a></li>
-                                <li class="menu-item" ><a href="<?php echo home_url().'/contact' ?>">Contact</a></li>
-                            </ul>
+                            <?php
+                                wp_nav_menu( array( 
+                                    'theme_location' => 'main-menu',
+                                    'menu'         => '',
+                                    'container'    => 'ul',
+                                    'items_wrap' => '<ul class="menu align-right dropdown" data-dropdown-menu>%3$s</ul>' ,
+                                    'menu_class'   => 'menu align-right dropdown',
+                                ));
+                            ?> 
                         </nav>
                         <div class="navutil">
                             <a href="tel:702248800" class="navphone hide-for-large" >
