@@ -41,7 +41,7 @@
                     <h3><?php echo $project_subtitle; ?></h3>
                 </div>	
                 <div class="cell large-7 large-offset-1 align-self-bottom show-for-large">				
-                    <a class="info" class="#information"><span>View Information</span></a>
+                    <a class="info" href="#information"><span>View Information</span></a>
                 </div>		
             </div>			
         </div>			

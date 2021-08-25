@@ -124,7 +124,7 @@
 			else: 
 				echo '<h3 class="text-center">No portfolio found.</h3>';
 			endif; ?>
-			<div class="btn_read_more hide-for-large"><button class="button hollow primary">Load More</div>
+			<div class="btn_read_more hide-for-large"><button id="more_posts" class="button hollow primary">Load More</div>
 			</div>
 		</div>
 	</div>	
