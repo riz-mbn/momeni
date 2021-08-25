@@ -183,13 +183,22 @@ select {
 
     input, select, textarea, select {
         margin-bottom: 0;
+
+        &:focus {
+            background: rgba(255, 255, 255, 0.15);
+            border-bottom: 1px solid #fff !important;
+            border: 0;
+        }
     }
 
     label {
+        font-family: $heading-font-family;
         font-size: 13px;
         line-height: 1;
         color: $color-white;
         margin-bottom: 10px;;
+        letter-spacing: 0.1em;
+
     }
 
     [type="checkbox"] + label {
