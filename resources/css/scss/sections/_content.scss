@@ -1,6 +1,7 @@
 body {
     &:not(.home),
-    &:not(.single){
+    &:not(.single),
+    &:not(.portfolio){
         background: url(../img/bgs/grid.png) repeat center , #111;
         background-size: cover;
     }
@@ -252,7 +253,6 @@ p {
     width: 25%;
 }
 
-
 .project_thumb{
     position:relative;
     figure {
@@ -262,6 +262,12 @@ p {
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        @include media (max-width, 1023px) {
+            height:327px;
+        }
+        @include media (max-width, 480px) {
+            height:190px;
         }
     }
 }

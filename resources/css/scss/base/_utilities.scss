@@ -53,8 +53,13 @@
 	}
 
 	span {
-		
 		margin-left: 20px;
+
+		&.backtolist {
+			
+			
+			font-size:13px;
+		}
 	}
 
 	&:before{
@@ -116,6 +121,7 @@ select {
 	background:rgba(255,255,255,0.1) !important;
 	position: relative;
 	display: flex;
+	font-weight: 700;
 
 	&:focus {
     	border: 1px solid rgba(255,255,255,0.1) !important;

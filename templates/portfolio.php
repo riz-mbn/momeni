@@ -42,7 +42,7 @@
 		<div class="button-group filters-button-group">
 			<button class="button filter-button show-for-large is-checked" data-filter="*">All Projects</button>
 			<?php
-			$terms = get_terms( 'projects_cat', array( 'hide_empty' => false ) ); // Get all terms of a taxonomy
+			$terms = get_terms( 'projects_cat', array( 'hide_empty' => true ) ); // Get all terms of a taxonomy
 			if ( $terms && !is_wp_error( $terms ) ) :
 				?>
 				<?php foreach ( $terms as $term ) : ?>
@@ -53,7 +53,7 @@
 		<select class="filter-select hide-for-large">					
 			<option class="" value="*">All Projects</option>
 			<?php
-			$terms = get_terms( 'projects_cat', array( 'hide_empty' => false ) ); // Get all terms of a taxonomy
+			$terms = get_terms( 'projects_cat', array( 'hide_empty' => true ) ); // Get all terms of a taxonomy
 			if ( $terms && !is_wp_error( $terms ) ) :
 				?>
 				<?php foreach ( $terms as $term ) : ?>
@@ -121,6 +121,8 @@
 					?>
 				</div>	
 			<?php wp_reset_postdata();
+			else: 
+				echo '<h3 class="text-center">No portfolio found.</h3>';
 			endif; ?>
 			<div class="btn_read_more hide-for-large"><button class="button hollow primary">Load More</div>
 			</div>

@@ -1,6 +1,8 @@
 
 .portfolio {
 
+    background: #111 !important;
+
     .portfolio_about {
         padding: 0;
 
@@ -71,8 +73,18 @@
 
     }
 
-    @include media (max-width, 1023px){        
+    @include media (max-width, 1023px){   
+        background: #000 !important;     
     
+
+        .portfolio_about {
+            padding: 0;
+    
+            .grid-container {     
+                height: 80px;
+            }
+        }
+
         .portfolio_items {
             .portfolio_item {
                 width: 100%;
@@ -109,7 +121,6 @@
 }
 
 //single portfolio
-
 .single-projects_type {
     background: #111 !important;
 }
@@ -153,6 +164,7 @@
         padding-bottom: 60px;
 
         h3 {
+            color: #fff;
             font-family: $body-font-family;
             font-size: 32px;
             font-weight: 300;
@@ -182,6 +194,7 @@
             .gallery {
                 width: 49.5%;
                 height: 700px;
+                flex: 3 1 auto;
 
                 .gallery_img{
                     width: 100%;
@@ -196,13 +209,13 @@
 
                                 
 
-                &:last-child {
-                    width: 100%;
-                }
+                // &:last-child {
+                //     width: 100%;
+                // }
 
-                &:not(:last-child) {
-                    flex: 1;
-                }
+                // &:not(:last-child) {
+                //     flex: 2 2;
+                // }
             }
         }
     }
@@ -227,6 +240,7 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             color: $color-white;
+            z-index:-1;
 
             &:before {
                 content: '';
@@ -280,6 +294,13 @@
         .project_item {
             width: 50%;
         }
+
+        .more_projects {
+            font-size: 13px;
+            letter-spacing: 0.1em;
+            padding-left: 10px;
+        }
+
     }
 
     @include media (max-width, 1600px) {
@@ -294,6 +315,16 @@
                 padding-left: 50px
             }
             
+        }
+    }
+    
+    @include media (max-width, 768px){                
+        
+        .col-content {
+
+            .float_text {
+                left: -5% !important;
+            }
         }
     }
 
@@ -322,6 +353,8 @@
         }
 
         .col-gallery {
+            padding: 0 30px;
+
             .project_gallery {
                 .gallery {
                     width: 100%;

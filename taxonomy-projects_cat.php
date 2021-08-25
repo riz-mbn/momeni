@@ -86,6 +86,8 @@
 				endwhile; ?>
 			</div>
 			<?php wp_reset_postdata();
+			else: 
+				echo '<h3 class="text-center align-self-middle">No Portfolio found.</h3>';
 			endif; ?>
         </div>
     </div>
