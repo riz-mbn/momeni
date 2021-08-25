@@ -169,7 +169,10 @@
                     flex-direction: column;
                     justify-content: center;
                     width: 50%;
-                    
+
+                    @include media(max-width, 1023px){
+                        width:100%;
+                    }                    
                     .icon_blurb {    
                         align-items: flex-start;        
 
