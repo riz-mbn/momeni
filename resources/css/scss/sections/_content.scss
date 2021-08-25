@@ -10,6 +10,16 @@ body {
 
 }
 
+::-moz-selection { /* Code for Firefox */
+    color: $color-white;
+    background: $color-primary;
+  }
+  
+  ::selection {
+    color: $color-white;
+    background: $color-primary;
+  }
+
 #wrapper {
     overflow: hidden;
 }
