@@ -11,29 +11,6 @@ else {
 }
 ?>
 <section class="sec-contact page-content">
-	<!-- <div id="the-map" class="map_bg" data-marker="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.svg">
-		<div class="map_content" 
-			data-logo="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" 
-			data-address="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map-2.svg"
-			data-lang="<?php echo $lang; ?>"
-			data-lat="<?php echo $lat; ?>" >
-		</div>
-	</div> -->
-	<!-- <div class="map_bg">
-		<figure class="map"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_map.jpg" width="1920px" height="1176px"></figure>
-		<div class="map_content">
-			<div class="map_content_inner">
-				<div class="map_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" alt="" width="210" height="140"></figure></div>
-				<div class="map_location">		
-					<div class="icon_blurb">						
-						<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map-2.svg" alt="" width="21" height="21" /></figure></span>
-						<span class="icon_txt">3110 S. Durango Dr., Suite 205<br/> Las Vegas, Nevada 89117</span>
-					</div>
-				</div>
-			</div>
-			<figure class="map_pin"><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.png" width="40" height="59"></figure>
-		</div>
-	</div> -->
 	<div  class="map_bg" >
 		<div id="the-map"style="height: 100%;"></div>
 			<script>
@@ -55,6 +32,7 @@ else {
 					zoom: 13,
 					//backgroundColor: '#dbebf5',
 					center: map_center,
+      				disableDefaultUI: true,
 					styles: 
 						[
 							{
@@ -362,7 +340,7 @@ else {
 							}
 						]
 				});
-				
+
 				var iw = new google.maps.InfoWindow({});
 				for(var i=0;i<array_maps.length;i++){
 					var ulrp = array_maps[i];
@@ -370,10 +348,8 @@ else {
 					position: ulrp,
 					icon:"<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.svg",
 					map: map
-					});
+				});
 
-						
-							
 				var infowindow = new google.maps.InfoWindow({
 					content: contentString,
 				});
@@ -384,7 +360,7 @@ else {
 				}//end
 			}
 			</script>
-		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGw796lT6PGFF97mZxv5LnemjwcDaJMJQ&callback=initMap"></script>
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=<?php echo MBN_MAP_API_KEY ?>&callback=initMap"></script>	
 	</div>
 	<div class="map_caption">
 		<div class="grid-container">		
