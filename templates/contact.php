@@ -1,14 +1,9 @@
 <?php 
     /* Template Name: Contact template */
     get_header();
-if(wp_is_mobile()){
-	$lat = 336.132674;
-	$lang = -115.278277;
-}
-else {
+
 	$lat = 36.142656;
 	$lang= -115.291667;
-}
 ?>
 <section class="sec-contact page-content">
 	<div  class="map_bg" >

@@ -3,8 +3,7 @@
     var app = {
         onReady: function(){
             app.customDropdown();
-            app.navbarActive();
-            
+            //app.navbarActive();            
         },	
         onLoad: function(){
             $(document).foundation();

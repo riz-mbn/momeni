@@ -95,6 +95,29 @@
     }
 }
 
+@include media (max-width, 1024px){
+    .company {
+
+        .our_team {
+            .grid-container {
+                padding: 0 !important;
+            }
+            .cols2-s4 {
+    
+                .col-image {
+                    height: 220px;
+                    margin: 0 !important;
+
+                    img {         
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
 @include media (max-width, 1023px){
     .company {
         
@@ -104,6 +127,9 @@
         }
 
         .our_team {
+            .grid-container {
+                padding: 0 30px !important;
+            }
             .cols2-s4 {
                 background-color: transparent;
                 .text-group {
