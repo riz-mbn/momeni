@@ -181,6 +181,7 @@
             
             $('.menu .menu-item').find('a').filter(function() {
                 var href = $(this).attr('href') + '/';
+
                 return  href === location.href.replace(/#.*/, "");
             }).closest('.menu-item').addClass('current-menu-item').closest('.menu-item').siblings().removeClass('current-menu-item');
         }     

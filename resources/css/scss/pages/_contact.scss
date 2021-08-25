@@ -32,6 +32,8 @@
         max-width: 320px !important;
         padding: 0px !important;
         border-radius: 8px;
+        box-shadow: 0 2px 7px 1px rgba(105, 81, 81, 0.3);
+        background-color: white;
 
         &:before {
             content: url('../img/icon/icn-map-caret.png');
@@ -41,19 +43,15 @@
             left: 45%;
         }
     }
-
     .map_pin {
         text-align: center;
     }
 
     .map_content_inner {
-        box-shadow: 0 2px 7px 1px rgba(105, 81, 81, 0.3);
-        background-color: white;
         border-radius: 8px;
         width: 320px;
-        height: 238px;
+        height: auto;
         padding: 0;
-        margin-bottom: 20px;
     
         .map_location {            
             letter-spacing: 0.1em;

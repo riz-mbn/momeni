@@ -42,32 +42,8 @@
         .grid-slick {
             padding: 0;
         }
+
         
-
-        .button-group {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1em;
-            
-            .button {
-                font-family: $heading-font-family;
-                font-size: 14px;
-                font-weight: 700;
-                letter-spacing: 0.3em;
-                color: $color-white;
-                background: rgba(64, 65, 65, 0.6);
-                padding: 5px 10px;
-                border-radius: 5px;
-
-                &:hover {
-                    background: linear-gradient(90deg, #0F4D4D 0%, #0C3E3E 48%, #0A3333 100%);
-                }
-
-                &.is-checked{
-                    background: $color-primary;
-                }
-            }
-        }
 
         .grid {
             display: flex;
@@ -105,8 +81,31 @@
         }
 
     }
+}
 
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    
+    .button {
+        font-family: $heading-font-family;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.3em;
+        color: $color-white;
+        background: rgba(64, 65, 65, 0.6);
+        padding: 5px 10px;
+        border-radius: 5px;
 
+        &:hover {
+            background: linear-gradient(90deg, #0F4D4D 0%, #0C3E3E 48%, #0A3333 100%);
+        }
+
+        &.is-checked{
+            background: $color-primary;
+        }
+    }
 }
 
 //single portfolio
@@ -127,6 +126,12 @@
             }
         }
     }
+
+    .category_btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+    }    
 
     .float_line {
         position: absolute;
@@ -244,7 +249,7 @@
             font-size: 14px;
             font-weight: 400;
             letter-spacing: 0.02em;
-            
+            color:#AAAAAA;            
         }
         .button {                
             font-size: 14px;

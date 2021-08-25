@@ -19,7 +19,7 @@ else {
 			data-lat="<?php echo $lat; ?>" >
 		</div>
 	</div> -->
-	<div class="map_bg">
+	<!-- <div class="map_bg">
 		<figure class="map"><img src="<?php echo MBN_ASSETS_URI ?>/img/bgs/img_map.jpg" width="1920px" height="1176px"></figure>
 		<div class="map_content">
 			<div class="map_content_inner">
@@ -33,8 +33,358 @@ else {
 			</div>
 			<figure class="map_pin"><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.png" width="40" height="59"></figure>
 		</div>
+	</div> -->
+	<div  class="map_bg" >
+		<div id="the-map"style="height: 100%;"></div>
+			<script>
+				function initMap() {
+					var map_center = {lat:<?php echo $lat; ?>,lng:<?php echo $lang; ?>};
+					var array_maps = [{lat:36.132674,lng:-115.278277}];
+					//var snazzyMap       = JSON.parse(wpGlobals.mapOptions);
+					var contentString =
+				'<div class="map_content_inner">'+ 
+					'<div class="map_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/momeni_logo_mob_dark.svg" alt="" width="210" height="140"></figure></div>'+
+					'<div class="map_location">' +			
+						'<div class="icon_blurb">' +						
+							'<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map-2.svg" alt="" width="21" height="21" /></figure></span>' +
+							'<span class="icon_txt">3110 S. Durango Dr., Suite 205<br/> Las Vegas, Nevada 89117</span>' +
+						'</div>' +
+					'</div>' +
+				'</div>';
+				var map = new google.maps.Map(document.getElementById('the-map'), {
+				zoom: 13,
+				//backgroundColor: '#dbebf5',
+				center: map_center,
+					styles: [
+					{
+						"featureType": "all",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"saturation": 36
+							},
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 40
+							}
+						]
+					},
+					{
+						"featureType": "all",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "on"
+							},
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 16
+							}
+						]
+					},
+					{
+						"featureType": "all",
+						"elementType": "labels.icon",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 20
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 17
+							},
+							{
+								"weight": 1.2
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "labels",
+						"stylers": [
+							{
+								"color": "#f8f5f5"
+							}
+						]
+					},
+					{
+						"featureType": "administrative",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "landscape",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 20
+							}
+						]
+					},
+					{
+						"featureType": "landscape",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#ffffff"
+							}
+						]
+					},
+					{
+						"featureType": "landscape",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "landscape.natural",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"visibility": "off"
+							},
+							{
+								"color": "#ff0000"
+							}
+						]
+					},
+					{
+						"featureType": "landscape.natural",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 21
+							}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#ffffff"
+							}
+						]
+					},
+					{
+						"featureType": "poi",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#00a84f"
+							}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#ffffff"
+							}
+						]
+					},
+					{
+						"featureType": "road",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#00a84f"
+							},
+							{
+								"lightness": 17
+							}
+						]
+					},
+					{
+						"featureType": "road.highway",
+						"elementType": "geometry.stroke",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 29
+							},
+							{
+								"weight": 0.2
+							}
+						]
+					},
+					{
+						"featureType": "road.arterial",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 18
+							}
+						]
+					},
+					{
+						"featureType": "road.local",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 16
+							}
+						]
+					},
+					{
+						"featureType": "transit",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#000000"
+							},
+							{
+								"lightness": 19
+							}
+						]
+					},
+					{
+						"featureType": "transit",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#343c38"
+							}
+						]
+					},
+					{
+						"featureType": "transit",
+						"elementType": "labels.text.fill",
+						"stylers": [
+							{
+								"color": "#ffffff"
+							}
+						]
+					},
+					{
+						"featureType": "transit",
+						"elementType": "labels.text.stroke",
+						"stylers": [
+							{
+								"visibility": "off"
+							}
+						]
+					},
+					{
+						"featureType": "transit.line",
+						"elementType": "geometry.fill",
+						"stylers": [
+							{
+								"color": "#343c38"
+							}
+						]
+					},
+					{
+						"featureType": "water",
+						"elementType": "geometry",
+						"stylers": [
+							{
+								"color": "#00a64e"
+							},
+							{
+								"lightness": 17
+							}
+						]
+					}
+				]
+
+				});
+				var iw = new google.maps.InfoWindow({});
+				for(var i=0;i<array_maps.length;i++){
+					var ulrp = array_maps[i];
+					var marker = new google.maps.Marker({
+					position: ulrp,
+					icon:"<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map.svg",
+					map: map
+					});
+
+						
+							
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString,
+				});
+				
+				infowindow.open(map, marker);
+				
+					google.maps.event.addListener(window, 'load', initMap);
+				}//end
+			}
+			</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDGw796lT6PGFF97mZxv5LnemjwcDaJMJQ&callback=initMap"></script>
 	</div>
-	
 	<div class="map_caption">
 		<div class="grid-container">		
 			<div class="grid-x">

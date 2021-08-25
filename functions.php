@@ -3,7 +3,7 @@
 define('MBN_DIR_URI', get_template_directory_uri());
 define('MBN_DIR_PATH', get_template_directory());
 define('MBN_ASSETS_URI', MBN_DIR_URI.'/resources');
-define('MBN_MAP_API_KEY',"AIzaSyCdKe1vw-cidSaFEvaEcuesAI7sLkfda-4");
+define('MBN_MAP_API_KEY',"AIzaSyDGw796lT6PGFF97mZxv5LnemjwcDaJMJQ");
 
 /**
  * Theme setup
@@ -108,18 +108,18 @@ function mbn_enqueue_scripts(){
 
         
     //google maps
-    wp_enqueue_script(
-        'google-maps',
-        'https://maps.googleapis.com/maps/api/js?' . http_build_query( array(
-            'key'         => MBN_MAP_API_KEY,
-            'v'         => '3',
-            'libraries' => 'places',
-            'language'  => substr( get_locale(), 0, 2 ),
-        ) ),
-        array(),
-        '3',
-        false
-    );
+    // wp_enqueue_script(
+    //     'google-maps',
+    //     'https://maps.googleapis.com/maps/api/js?' . http_build_query( array(
+    //         'key'         => MBN_MAP_API_KEY,
+    //         'v'         => '3',
+    //         'libraries' => 'places',
+    //         'language'  => substr( get_locale(), 0, 2 ),
+    //     ) ),
+    //     array(),
+    //     '3',
+    //     false
+    // );
 
     wp_localize_script('app', 'wpGlobals', array(
         'mapOptions' => file_get_contents( MBN_ASSETS_URI.'/js/map_style.json')
@@ -246,7 +246,7 @@ function mbn_page_type() {
 	if ( strpos( $template, 'services.php' ) ) {
 		return 'services';
 	}
-	if ( strpos( $template, 'portfolio.php' ) ) {
+	if ( strpos( $template, 'portfolio.php' ) || strpos( $template, 'taxonomy-projects_cat.php' )  ) {
 		return 'portfolio';
 	}
 	if ( strpos( $template, 'contact.php' ) ) {
@@ -271,7 +271,7 @@ function mbn_page_type() {
 
 
 function momeni_map(){	
-    //echo '<script src="https://maps.googleapis.com/maps/api/js?key='. MBN_MAP_API_KEY .'&callback=initMap&libraries=&v=weekly" type="text/javascript" async="false" ></script>';	
+    echo '<script src="https://maps.googleapis.com/maps/api/js?key='. MBN_MAP_API_KEY .'&callback=initMap&libraries=&v=weekly" type="text/javascript" async="false" ></script>';
 ?>
 <script>
 
@@ -309,6 +309,7 @@ function momeni_map(){
 				content: contentString,
 			});
 			
+			infowindow.open(map, marker);
 			var marker = new google.maps.Marker({
 				position : new google.maps.LatLng(36.132674, -115.278277),
 				icon: custom_marker,
@@ -323,6 +324,7 @@ function momeni_map(){
 
 </script>
 
-<?php
+
+<?php	
 }
-add_action('wp_head', 'momeni_map');
+//add_action('wp_footer', 'momeni_map');

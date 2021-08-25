@@ -26,6 +26,7 @@
 
     $projects_cat       = wp_get_post_terms( $ID, 'projects_cat' );
     $works_cat          = wp_get_post_terms( $ID, 'projects_work_cat' );
+
 ?>
 <span class="float_line vertical"></span>
 <section class="single_port">
@@ -48,7 +49,9 @@
     <div class="col-featimg">
         <div class="grid-x grid-margin-x">
             <div class="cell xlarge-12">
+                <?php if( $img_url): ?>
                 <figure class="featured_img"><img src="<?php echo esc_url($img_url) ?>" /></figure>
+                <?php endif; ?>
             </div>		
         </div>
     </div>	
@@ -56,32 +59,42 @@
         <div class="grid-container">
         <span class="float float_text">Project Information</span>
             <div class="grid-x grid-margin-x">
-                <div class="cell large-5 col-info">
-                    <div class="text-wrap">
-                        <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></p>
-                    </div>
-                    <?php if ( $works_cat || !is_wp_error( $works_cat ) ): ?>
+                <div class="cell large-4 col-info">
+                    <?php if ( !empty($project_state) || !empty($project_city) ):  ?>
+                        <div class="text-wrap">
+                            <p class="address"><?php echo esc_html($project_state.', '. $project_city ) ?></p>
+                        </div>
+                    <?php endif; ?>    
+                    <?php if ( count($works_cat) > 0):  ?>
                         <div class="text-wrap show-for-large">
                             <p class="category_title">Work Category</p>
-                            <p><?php                                
+                            <p><?php 
+                            if ( $works_cat || !is_wp_error( $works_cat ) ):                               
                                 foreach ( $works_cat as $work_cat ):
                                     echo '<span>' . esc_attr( $work_cat->name . ', ' ) . ' </span>';
                                 endforeach;
+                            endif;
                             ?> </p>  
                         </div>
-                    <?php endif; ?>        
-                    <?php if ( $projects_cat || !is_wp_error( $projects_cat ) ): ?>
+                    <?php endif; ?>    
+                    <?php if ( count($projects_cat) > 0):  ?>    
                         <div class="text-wrap">
-                            <p class="category_title">Project Category</p>     
-                            <p class="button"><?php
+                            <p class="category_title">Project Category</p>    
+                            <div class="category_btns"> 
+                                <?php
+                                if ( $projects_cat || !is_wp_error( $projects_cat ) ): 
                                     foreach ( $projects_cat as $project_cat ):
+                                        echo '<button class="button">';
                                         echo '<span>' . esc_attr( $project_cat->name . ' ' ) . '</span>';
+                                        echo '</button>';
                                     endforeach;
-                            ?> </p>    
+                                endif;
+                                ?>     
+                            </div>
                         </div>
                     <?php endif; ?>    
                 </div>		
-                <div class="cell large-7 align-self-middle col-copy show-for-large">
+                <div class="cell large-7 large-offset-1 align-self-middle col-copy show-for-large">
                     <h3><?php echo $project_excerpt ?></h3>
                 </div>		
             </div>	
@@ -207,8 +220,6 @@
         </div>
     </div>
 </section>
-
-
 <section class="sec_cta show-for-large">	
 	<div class="grid-x grid-margin-x cols2-s4 col-cta">
 		<div class="cell xlarge-7 large-4 align-self-middle col-copy">
