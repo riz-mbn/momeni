@@ -135,5 +135,22 @@
     
     }
 
+    @include media (max-width, 768px){
+
+        section {
+            padding:0;
+        }
+
+        .services_about {
+            .title_group {
+                margin-top: -30px;
+            }
+
+            .cols2-s4 {
+                padding-bottom: 0;
+            }
+        }
+    }
+            
 
 }

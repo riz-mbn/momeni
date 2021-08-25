@@ -380,16 +380,19 @@ else {
 								<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-pin-map-2.svg" alt="" width="21" height="21" /></figure></span>
 								<span class="icon_txt">3110 S. Durango Dr., Suite 205 Las Vegas, Nevada 89117</span>
 							</div>
+							<a href="tel:7022488004">	
+								<div class="icon_blurb">						
+									<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="21" height="21" /></figure></span>
+									<span class="icon_txt">(702) 248-8004</span>
+								</div>		
+							</a>
 
-							<div class="icon_blurb">						
-								<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="21" height="21" /></figure></span>
-								<span class="icon_txt">(702) 248-8004</span>
-							</div>
-
-							<div class="icon_blurb">						
-								<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-tphone.svg" alt="" width="21" height="21" /></figure></span>
-								<span class="icon_txt">(702) 248-8495</span>
-							</div>
+							<a href="tel:7022488495">	
+								<div class="icon_blurb">				
+										<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-tphone.svg" alt="" width="21" height="21" /></figure></span>
+										<span class="icon_txt">(702) 248-8495</span>
+								</div>
+							</a>
 
 							<div class="icon_blurb">						
 								<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-envelope.svg" alt="" width="21" height="21" /></figure></span>
