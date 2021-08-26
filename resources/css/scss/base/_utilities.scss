@@ -106,6 +106,10 @@
 
 	.icon_txt {
 		font-size: 18px;
+
+		@include media (max-width, 1024px){
+			font-size: 16px;
+		}
 	}
 }
 select {

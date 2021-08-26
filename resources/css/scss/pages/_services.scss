@@ -79,6 +79,15 @@
 
     }
 
+    @include media (max-width, 1024px){
+        .services_items {
+            h2 {
+                font-size: 20px;
+            }
+    
+        }
+    }
+
     @include media (max-width, 1023px){
         p {
             color: #E1E1E1;
