@@ -39,6 +39,7 @@
             text-transform: uppercase;
             letter-spacing: 0.1em;
             color: #AAAAAA;
+            font-weight: 600;
         }
 
         .grid-slick {
@@ -98,7 +99,6 @@
 .button-group {
     display: flex;
     flex-wrap: wrap;
-    gap: 1em;
     
     .button {
         font-family: $heading-font-family;
@@ -109,6 +109,7 @@
         background: rgba(64, 65, 65, 0.6);
         padding: 5px 10px;
         border-radius: 5px;
+        margin: 10px;
 
         &:hover {
             background: linear-gradient(90deg, #0F4D4D 0%, #0C3E3E 48%, #0A3333 100%);
@@ -141,7 +142,11 @@
     .category_btns {
         display: flex;
         flex-wrap: wrap;
-        gap: 1em;
+
+        a {
+            margin: 10px;
+    
+        }
     }    
 
     .float_line {
@@ -189,12 +194,12 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: row;
-            gap: 1em;
 
             .gallery {
-                width: 49.5%;
+                width: 47%;
                 height: 700px;
                 flex: 3 1 auto;
+                margin:15px;
 
                 .gallery_img{
                     width: 100%;
@@ -244,11 +249,11 @@
 
             &:before {
                 content: '';
-                width: 100%;
+                width: 70%;
                 height: 1px;
                 position: absolute;
                 background: rgba(255, 255, 255, 0.1);
-                left: -110%;
+                left: -75%;
                 top: 50%;
             }
         }
@@ -307,24 +312,26 @@
         
         .col-content {
 
-            .float_text {
-                left: -3%;
-            }
-
             .col-info {
                 padding-left: 50px
             }
             
         }
     }
-    
-    @include media (max-width, 768px){                
+
+    @include media (max-width, 480px) {
         
         .col-content {
 
-            .float_text {
-                left: -5% !important;
+            .col-info {
+                padding-left: 30px !important;
             }
+
+            .button {
+                
+                letter-spacing: 0.1em;
+            }
+            
         }
     }
 
@@ -333,8 +340,10 @@
         
         .col-content {
 
+            padding-bottom: 0;
+
             .float_text {
-                left: -10%;
+                left: -40px;
             }
 
             .col-info {
@@ -359,6 +368,7 @@
                 .gallery {
                     width: 100%;
                     height: auto;
+                    margin: 15px 0;
     
                     .gallery_img{
                         width: 100%;
