@@ -85,8 +85,11 @@
     .gm-style-iw-d {
         overflow: auto !important;
     }
-    button img {
-        display: none !important;
+    button{
+        &.gm-ui-hover-effect,
+        img {
+            display: none !important;
+        }
     }
 
     @include media (max-width, 1023px){
