@@ -26,6 +26,7 @@
         select {            
 	        background:  url(../img/icon/icn-3dots.svg) no-repeat 6px/20px 20px rgba(255,255,255,0.1) !important; 
             border: 1px solid rgba(255, 255, 255, 0.1) !important;
+            background-position: 95% 50% !important;
             border-radius: 5px !important;
 
             &:focus {
@@ -91,6 +92,12 @@
             .portfolio_item {
                 width: 100%;
             }
+            
+
+            .project_wrap {
+                padding: 10px 0;
+            }
+
 
         }
 
@@ -201,7 +208,7 @@
                 width: 47%;
                 height: 700px;
                 flex: 3 1 auto;
-                margin:15px;
+                margin: 15px;
 
                 .gallery_img{
                     width: 100%;
@@ -370,7 +377,7 @@
                 .gallery {
                     width: 100%;
                     height: auto;
-                    margin: 15px 0;
+                    margin: 10px 0;
     
                     .gallery_img{
                         width: 100%;
