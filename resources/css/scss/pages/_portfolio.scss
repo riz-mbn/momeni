@@ -189,6 +189,11 @@
         }
         .back_btn_wrap {
             margin-bottom: 20px;
+
+            .back_btn {                            
+                display: flex;
+                align-items: center;
+            }
         }
     }
 
