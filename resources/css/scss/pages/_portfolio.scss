@@ -60,7 +60,7 @@
         }
 
         .project_wrap {
-            padding: 10px;
+            padding: 20px 20px 0 0;
         }
 
     }
@@ -98,6 +98,9 @@
                 padding: 10px 0;
             }
 
+            .tiny {
+                margin-bottom: 0
+            }
 
         }
 
@@ -117,7 +120,7 @@
         background: rgba(64, 65, 65, 0.6);
         padding: 5px 10px;
         border-radius: 5px;
-        margin: 10px;
+        margin: 10px 10px 0 0;
 
         &:hover {
             background: linear-gradient(90deg, #0F4D4D 0%, #0C3E3E 48%, #0A3333 100%);
