@@ -1,12 +1,15 @@
 body {
-    &:not(.home),
-    &:not(.single),
-    &:not(.portfolio){
+    &.page-template-company {
         background: url(../img/bgs/grid.png) repeat center , #111;
         background-size: cover;
+
+        @include media (max-width, 1024px){
+            
+            background: #111;
+        }
     }
     
-    background: #111 !important;
+    background: #111;
 
 }
 
@@ -38,6 +41,14 @@ header {
     &.sticky-container{		
     }
     
+}
+
+.grid-container {
+
+    @include media (min-width, 1600px) {
+        padding: 0;
+    }
+
 }
 
 .home {

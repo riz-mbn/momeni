@@ -148,6 +148,7 @@
                 }
 
                 .contact_info {
+                    background: rgba(64, 65, 65, 0.9);    
                     width:900px;
                 }
             }
@@ -180,8 +181,6 @@
 
             .col-blurb {
                 display: flex;
-                background: rgba(64, 65, 65, 0.9);
-
                 .col-img {
                     height: 300px;
 
@@ -226,7 +225,9 @@
         
         .map_caption {
             .grid-container {
-                padding: 0;
+                padding-right: 60px;
+                max-width: 1530px; 
+                padding-left: 0px;
             }
         }
     }
