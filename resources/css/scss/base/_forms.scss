@@ -22,14 +22,14 @@ select {
     height: $field-height;
     padding:15px 20px;
     font-size:13px;
-    font-family: $body-font-family;
+    font-family: $heading-font-family;
     margin: 0 0 15px;
     -webkit-border-radius:0;
     -moz-border-radius:0;
     border-radius:0;
 
     &:focus {
-        border: 1px solid $color-primary;
+        border: 2px solid $color-primary;
         -webkit-box-shadow: none;
         -moz-box-shadow: none;
         box-shadow: none;
@@ -186,7 +186,7 @@ select {
 
         &:focus {
             background: rgba(255, 255, 255, 0.15);
-            border-bottom: 1px solid #fff !important;
+            border-bottom: 2px solid #fff !important;
             border: 0;
         }
     }
@@ -305,6 +305,11 @@ select {
 
 .gform_submission_error {
     font-size: 16px;
+}
+
+.gform_button {
+    
+    font-family: $heading-font-family !important;
 }
 
 //Gravity form custom

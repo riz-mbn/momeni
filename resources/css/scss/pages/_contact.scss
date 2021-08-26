@@ -121,6 +121,7 @@
             right: 0;
             -webkit-mask-image: -webkit-gradient(linear, left 30%, left top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
             z-index: -1;
+            
         }
 
         .map_content{   
@@ -137,7 +138,20 @@
             .grid-x {
                 align-items: flex-end;
             }
-        
+            
+            .map_caption_inner {
+                display:flex;
+                align-items: flex-end;
+
+                .contact_form_wrap {
+                    width: 570px;
+                }
+
+                .contact_info {
+                    width:900px;
+                }
+            }
+
             .contact_form {
                 background: rgba(0,0,0,0.9);   
                 padding: 50px;
@@ -167,6 +181,16 @@
             .col-blurb {
                 display: flex;
                 background: rgba(64, 65, 65, 0.9);
+
+                .col-img {
+                    height: 300px;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
 
                 .text-wrap{
                     padding: 35px;
@@ -198,12 +222,30 @@
 
     }
 
+    @include media (min-width, 1024px) {
+        
+        .map_caption {
+            .grid-container {
+                padding: 0;
+            }
+        }
+    }
 
     @include media (max-width, 1024px){        
     
         .sec-contact {
             padding: 0;
-            height: 100vh;
+        }
+
+        .map_caption {
+            .contact_form {
+                padding: 30px;
+
+                .ginput_container_address .ginput_address_city, .ginput_container_address .ginput_address_state, .ginput_container_address .ginput_address_zip {
+                    width: 30.5%;
+                }
+
+            }
         }
     }
 
@@ -230,8 +272,18 @@
             .map_caption {
                 order: 1;
                 position: unset;
+                
                 .grid-container {
                     padding: 0 !important;
+                }
+
+                .map_caption_inner {
+                    flex-direction: column;
+
+                    .contact_form_wrap,
+                    .contact_info {
+                        width: 100%;
+                    }
                 }
 
                 .col-blurb {

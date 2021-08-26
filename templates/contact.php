@@ -2,15 +2,28 @@
     /* Template Name: Contact template */
     get_header();
 
-	$lat = 36.142656;
-	$lang= -115.291667;
 ?>
 <section class="sec-contact page-content">
 	<div  class="map_bg" >
 		<div id="the-map"style="height: 100%;"></div>
 			<script>
-				function initMap() {
-					var map_center = {lat:<?php echo $lat; ?>,lng:<?php echo $lang; ?>};
+				function initMap() {					
+
+					var $windowWidth = $(window).width();
+					var map_center;
+
+					if ( $windowWidth <= 1023 ) {
+						map_center = {lat:36.145151,lng:-115.278277};
+					}
+					else if ( $windowWidth == 1024 ){
+						map_center = {lat:36.136279,lng:-115.304197};
+					}
+					else {						
+						map_center = {lat:36.142656,lng:-115.29166};
+					}			
+
+					console.log( map_center['lat'] + ' ' + map_center['lng']);
+
 					var array_maps = [{lat:36.132674,lng:-115.278277}];
 					//var snazzyMap       = JSON.parse(wpGlobals.mapOptions);
 					var contentString =
@@ -359,15 +372,15 @@
 	</div>
 	<div class="map_caption">
 		<div class="grid-container">		
-			<div class="grid-x">
-				<div class="cell large-5">
+			<div class="map_caption_inner">
+				<div class="contact_form_wrap">
 					<div class="text-wrap contact_form">
 						<p class="small">CONTACT</p>
 						<h3 class="">Send us a message</h3>
 						<?= do_shortcode('[gravityform id="1" title="false" description="false" ajax="false"]') ?>
 					</div>
 				</div>
-				<div class="cell large-7">
+				<div class="contact_info">
 					<div class="col-blurb">
 						<figure class="col-img"><img src="<?php echo MBN_ASSETS_URI ?>/img/contact-img.jpg" alt="" width="380" height="300"/></figure>
 						<div class="text-wrap">							
