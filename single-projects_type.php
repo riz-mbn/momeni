@@ -213,7 +213,7 @@
 <section class="contact_info hide-for-large">   
     <div class="grid-container">     
         <div class="text-group">
-            <a href="tel:702248800">
+            <a href="tel:7022488004">
                 <span><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure></span>
                 <span>(702) 248-8004</span>
             </a>
@@ -234,7 +234,7 @@
 				<a href="<?php echo home_url().'/services' ?>" class="button primary hollow">What We Do</a>
 			</div>
 			<div class="text-group">
-				<a href="tel:702248800">
+				<a href="tel:7022488004">
 					<span><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure></span>
 					<span>(702) 248-8004</span>
 				</a>

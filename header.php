@@ -40,10 +40,10 @@
                             ?> 
                         </nav>
                         <div class="navutil">
-                            <a href="tel:702248800" class="navphone hide-for-large" >
+                            <a href="mailto:info@momeniconstruction.com" class="navphone hide-for-large" >
                                 <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-envelope.svg" alt="" width="24" height="24" /></figure>
                             </a>
-                            <a href="mailto:info@momeniconstruction.com" class="navemail hide-for-large">
+                            <a href="tel:7022488004" class="navemail hide-for-large">
                                 <figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure>
                             </a>
                             <a class="navicon hide-for-large" data-toggle="header">mobile menu</a>
@@ -59,7 +59,7 @@
                         </ul>
                         <div class="contact_info text-center">   
                             <div class="text-group">
-                                <a href="tel:702248800">
+                                <a href="tel:7022488004">
                                     <span><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-phone.svg" alt="" width="24" height="24" /></figure></span>
                                     <span>(702) 248-8004</span>
                                 </a>
