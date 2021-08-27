@@ -79,6 +79,15 @@
 
     }
 
+    @include media (max-width, 1048px){
+        .services_items {
+            h2 {
+                font-size: 30px;
+            }
+    
+        }
+    }
+
     @include media (max-width, 1024px){
         .services_items {
             h2 {
