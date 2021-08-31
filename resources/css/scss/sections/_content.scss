@@ -60,7 +60,7 @@ header {
 }
 
 .content {
-    min-height: 70vh;
+    min-height: 80vh;
     padding-bottom: 60px;
 
     @include media (max-width, 1023px){
