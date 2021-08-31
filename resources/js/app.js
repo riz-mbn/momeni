@@ -189,8 +189,7 @@
         },
 
         footer: function(){
-            console.log($('.content').height());
-            if($('.content').height() < 989 && $(window).width() > 1023 ) {
+            if($('.content').height() < 1025 && $(window).width() > 1023 ) {
                 $('footer').css('position', 'fixed');
             }
         }
