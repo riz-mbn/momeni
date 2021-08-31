@@ -1,5 +1,6 @@
 body {
-    &.page-template-company {
+    &.page-template-company,
+    &.page-template-services {
         background: url(../img/bgs/grid.png) repeat center , #111;
         background-size: cover;
 
