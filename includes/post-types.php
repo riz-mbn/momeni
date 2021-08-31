@@ -66,7 +66,7 @@ function projects_post() {
         array(
             'hierarchical' => true,         
             'has_archive' => true,
-            'label' => 'Project Categories',            
+            'label' => 'Portfolio Categories',            
             'query_var' => true,
             'show_admin_column' => true,
             'show_in_rest' => true,
