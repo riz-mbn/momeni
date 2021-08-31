@@ -232,15 +232,6 @@
                     }
                 }
 
-                                
-
-                // &:last-child {
-                //     width: 100%;
-                // }
-
-                // &:not(:last-child) {
-                //     flex: 2 2;
-                // }
             }
         }
     }
@@ -248,7 +239,7 @@
     .col-content {
         position: relative;
         padding-top: 60px;
-        padding-bottom: 120px;
+        padding-bottom: 80px;
 
         .grid-container {
             position: relative;
@@ -269,12 +260,16 @@
 
             &:before {
                 content: '';
-                width: 70%;
+                width: 150%;
                 height: 1px;
                 position: absolute;
                 background: rgba(255, 255, 255, 0.1);
-                left: -75%;
+                left: -150%;
                 top: 50%;
+            }
+
+            @include media (max-width, 1440px) {
+                left: -5%;
             }
         }
         
