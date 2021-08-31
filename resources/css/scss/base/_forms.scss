@@ -27,6 +27,7 @@ select {
     -webkit-border-radius:0;
     -moz-border-radius:0;
     border-radius:0;
+    letter-spacing: 0.1em;
 
     &:focus {
         border: 2px solid $color-primary;
@@ -198,7 +199,6 @@ select {
         color: $color-white;
         margin-bottom: 10px;;
         letter-spacing: 0.1em;
-
     }
 
     [type="checkbox"] + label {
@@ -364,10 +364,13 @@ ul.gform_fields  {
 }
 
 .gfield_label {
-    .gfield_required {
+    .gfield_required_text {
         font-size: 0;
         &:before {
             content: '*';
+            color: $color-white;
+            font-size: 13px;
+            margin-left: 2px;
         }
     }
 }

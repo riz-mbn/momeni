@@ -113,11 +113,14 @@ h2 {
     line-height: 1.4;
 }
 .small {
-    font-size:16px !important;
-    color: $color-white;
-    text-transform: uppercase;
-    font-family: $heading-font-family; 
-    letter-spacing: 0.3em;  
+
+    &:not(textarea) {
+        font-size:16px !important;
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: $heading-font-family; 
+        letter-spacing: 0.3em
+    };  
 }
 
 .highlight {

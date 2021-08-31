@@ -401,11 +401,12 @@
 										<span class="icon_txt">(702) 248-8495</span>
 								</div>
 							</a>
-
-							<div class="icon_blurb">						
-								<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-envelope.svg" alt="" width="21" height="21" /></figure></span>
-								<span class="icon_txt">info@momeniconstruction.com</span>
-							</div>
+							<a href="mailto:info@momeniconstruction.com">
+								<div class="icon_blurb">						
+									<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-envelope.svg" alt="" width="21" height="21" /></figure></span>
+									<span class="icon_txt">info@momeniconstruction.com</span>
+								</div>
+							</a>
 						</div>
 					</div>
 				</div>
