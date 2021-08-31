@@ -3,7 +3,9 @@
     var app = {
         onReady: function(){
             app.customDropdown();
-            //app.navbarActive();            
+            //app.navbarActive();     
+
+            app.footer();       
         },	
         onLoad: function(){
             $(document).foundation();
@@ -184,7 +186,14 @@
 
                 return  href === location.href.replace(/#.*/, "");
             }).closest('.menu-item').addClass('current-menu-item').closest('.menu-item').siblings().removeClass('current-menu-item');
-        }     
+        },
+
+        footer: function(){
+            console.log($('.content').height());
+            if($('.content').height() < 989 && $(window).width() > 1023 ) {
+                $('footer').css('position', 'fixed');
+            }
+        }
     }
 
     document.addEventListener('DOMContentLoaded', app.onReady);
