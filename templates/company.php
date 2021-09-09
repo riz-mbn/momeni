@@ -1,8 +1,8 @@
 <?php 
     /* Template Name: Company template */
     get_header();
-
 ?>
+
 <section class="our_company">
 	<div class="grid-container">		
 		<div class="grid-x grid-margin-x cols2-s4">
@@ -22,9 +22,9 @@
             <div class="cell xlarge-8 large-6 medium-12">
                 <figure class="col-image"><img src="<?php echo MBN_ASSETS_URI ?>/img/map-bldg.png" alt="" width="1108" height="886"></figure>
                 <p class="hide-for-large">We operate in 
-					<span class="strong">Nevada, California, Arizona,</span> and 
-					<span class="strong">Utah</span>, and have 
-					<span class="strong">completed numerous projects of varying sizes totaling hundreds of millions of dollars.</span></p>
+					<span class="strong"><em>Nevada, California, Arizona,</em></span> <em>and</em> 
+					<span class="strong"><em>Utah</em></span><em>, and have</em>
+					<span class="strong"><em>completed numerous projects of varying sizes totaling hundreds of millions of dollars.</em></span></p>
             </div>		
         </div>
 	</div>	
