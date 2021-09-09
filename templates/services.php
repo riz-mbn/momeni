@@ -9,7 +9,7 @@
 		<div class="grid-x grid-margin-x cols2-s4">
             <div class="cell xlarge-6 large-6 medium-12 align-self-middle col-copy ">
 				<p class="small">Services</p>
-                <h2><span class="highlight strong">Momeni</span> <span class="strong">Construction</span> offers the full range of construction services,</h2>
+                <h2><span class="highlight strong">Momeni</span> Construction offers the full range of construction services,</h2>
                 <p>including design-build, new building construction, site improvement, tenant improvement, post-construction repair, and concrete repair. We are also experienced in virtually any type of construction method and building material, including steel, wood frame, CMU, tilt up, modular, etc.</p>
             </div>	
             <div class="cell xlarge-6 large-6 medium-12">				

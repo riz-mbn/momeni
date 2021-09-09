@@ -9,7 +9,7 @@
             <div class="cell xlarge-4 large-6 medium-12 align-self-middle col-copy ">
 				<p class="small">Our Company</p>
                 <h2>
-					<span class="highlight">Momeni</span> Construction is a full-service 
+					<span class="highlight">Momeni</span> <span class="strong">Construction</span> is a full-service 
 				<span class="strong"><em>commercial construction</em></span> and 
 				<span class="strong"><em>construction management</em></span> firm based in Las Vegas, Nevada, since 2000.</h2>
                 <p class="show-for-large">We operate in 
