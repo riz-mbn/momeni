@@ -9,7 +9,7 @@
 		<div class="grid-x grid-margin-x cols2-s4">
             <div class="cell xlarge-6 large-6 medium-12 align-self-middle col-copy ">
 				<p class="small">Services</p>
-                <h2><span class="highlight">Momeni Construction</span> offers the full range of construction services,</h2>
+                <h2><span class="highlight strong">Momeni</span> <span class="strong">Construction</span> offers the full range of construction services,</h2>
                 <p>including design-build, new building construction, site improvement, tenant improvement, post-construction repair, and concrete repair. We are also experienced in virtually any type of construction method and building material, including steel, wood frame, CMU, tilt up, modular, etc.</p>
             </div>	
             <div class="cell xlarge-6 large-6 medium-12">				
@@ -29,6 +29,7 @@
 			<div class="cell xlarge-6 large-6 medium-12">
 				<div class="col-item const_col">
 					<h2>Construction</h2>
+					<p>We offer construction and design-build services for:</p>
 					<div class="icon_blurb_wrap">
 						<div class="icon_blurb">						
 							<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-retail.svg" alt="" width="32" height="30" /></figure></span>
@@ -87,7 +88,7 @@
 			<div class="cell xlarge-6 large-6 medium-12">
 				<div class="col-item constmgt_col">
 					<h2>Construction Management</h2>
-
+					<p>We can help you with your project:</p>
 					<div class="icon_blurb_wrap">
 						<div class="icon_blurb">						
 							<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-value-engg.svg" alt="" width="32" height="30" /></figure></span>
@@ -116,7 +117,7 @@
 
 						<div class="icon_blurb">						
 							<span class="icon_img"><figure><img src="<?php echo MBN_ASSETS_URI ?>/img/icon/icn-const-sup.svg" alt="" width="32" height="30" /></figure></span>
-							<span class="icon_txt">Construction Supervisions</span>
+							<span class="icon_txt">Construction Supervision</span>
 						</div>
 
 						<div class="icon_blurb">						

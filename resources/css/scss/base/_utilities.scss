@@ -90,9 +90,11 @@
 		left: 0;
 	}
 
-	&:hover {
+	&:hover,
+	&:focus {
 		color: $color-primary;
 	}
+
 }
 
 .icon_blurb {            
@@ -112,6 +114,7 @@
 		}
 	}
 }
+
 select {
 	-webkit-appearance: none;
 	-moz-appearance: none;

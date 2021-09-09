@@ -49,16 +49,16 @@
     }
 
     .services_items {
-        color: #222222;
+        color: #ffffff;
 
         h2 {
-            color: #222222;
-            margin-bottom: 50px;
+            color: #ffffff;
         }
 
         .col-item {
-            background: $color-white;
+            background: #222;
             padding: 7% 10%;
+            border: 1px solid #404141;
 
             .icon_blurb_wrap {
                 position: relative;

@@ -9,7 +9,7 @@
             <div class="cell xlarge-4 large-6 medium-12 align-self-middle col-copy ">
 				<p class="small">Our Company</p>
                 <h2>
-					<span class="highlight">Momeni Construction</span> is a full-service 
+					<span class="highlight">Momeni</span> Construction is a full-service 
 				<span class="strong"><em>commercial construction</em></span> and 
 				<span class="strong"><em>construction management</em></span> firm based in Las Vegas, Nevada, since 2000.</h2>
                 <p class="show-for-large">We operate in 
@@ -48,7 +48,7 @@
 				<div class=" col-copy">
 					<div class="text-group">
 						<p class="">We are experienced in all phases and facets of construction, and work with our design affiliate, <span class="strong">Momeni Engineers, LLC</span> , to offer our clients design-build, value engineering, and sustainable design services as needed.</p>
-						<h2><span class="highlight"><em>Momeni Construction</em></span> <em>combines the expertise, experience, and capabilities of large contractors with the customer service, agility, and focus of a small business.</em></h2>
+						<h2><span class="highlight"><em>Momeni</em></span> <em>Construction combines the expertise, experience, and capabilities of large contractors with the customer service, agility, and focus of a small business.</em></h2>
 					</div>
 				</div>
 			</div>
