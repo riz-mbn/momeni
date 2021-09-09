@@ -25,8 +25,26 @@
                 $('#header').toggleClass('show-classes');
                 $('#header').removeClass('show-account');
                 $('#header').removeClass('show-menu');
-            });
+            });           
+                                    
+            var $windowWidth = $(window).width();
             
+            $('a[href*=#]:not([href=#])').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                  var target = $(this.hash);
+                  target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                  if (target.length) {
+                      					  
+					if( $windowWidth <= 1023 ){ offset = 70;}
+					else { offset = 100; }	
+
+                    $('html,body').animate({
+                      scrollTop: target.offset().top - offset
+                    }, 1000);
+                    return false;
+                  }
+                }
+              });
 
             $(window).scroll(function() {
                 var getTop = $('.courses_results').offset().top;
